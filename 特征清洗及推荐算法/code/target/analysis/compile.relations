@@ -1,0 +1,22 @@
+products:
+   D:\Desktop\云计算作业\movieRecommend\特征清洗及推荐算法\code\src\main\scala\com\pku\evanyang\movieScore.scala -> D:\Desktop\云计算作业\movieRecommend\特征清洗及推荐算法\code\target\classes\com\pku\evanyang\movieScore$$anonfun$1.class
+   D:\Desktop\云计算作业\movieRecommend\特征清洗及推荐算法\code\src\main\scala\com\pku\evanyang\movieScore.scala -> D:\Desktop\云计算作业\movieRecommend\特征清洗及推荐算法\code\target\classes\com\pku\evanyang\movieScore$$anonfun$2$$anonfun$apply$1.class
+   D:\Desktop\云计算作业\movieRecommend\特征清洗及推荐算法\code\src\main\scala\com\pku\evanyang\movieScore.scala -> D:\Desktop\云计算作业\movieRecommend\特征清洗及推荐算法\code\target\classes\com\pku\evanyang\movieScore$$anonfun$2.class
+   D:\Desktop\云计算作业\movieRecommend\特征清洗及推荐算法\code\src\main\scala\com\pku\evanyang\movieScore.scala -> D:\Desktop\云计算作业\movieRecommend\特征清洗及推荐算法\code\target\classes\com\pku\evanyang\movieScore$$anonfun$3.class
+   D:\Desktop\云计算作业\movieRecommend\特征清洗及推荐算法\code\src\main\scala\com\pku\evanyang\movieScore.scala -> D:\Desktop\云计算作业\movieRecommend\特征清洗及推荐算法\code\target\classes\com\pku\evanyang\movieScore$$anonfun$4.class
+   D:\Desktop\云计算作业\movieRecommend\特征清洗及推荐算法\code\src\main\scala\com\pku\evanyang\movieScore.scala -> D:\Desktop\云计算作业\movieRecommend\特征清洗及推荐算法\code\target\classes\com\pku\evanyang\movieScore$.class
+   D:\Desktop\云计算作业\movieRecommend\特征清洗及推荐算法\code\src\main\scala\com\pku\evanyang\movieScore.scala -> D:\Desktop\云计算作业\movieRecommend\特征清洗及推荐算法\code\target\classes\com\pku\evanyang\movieScore.class
+binary dependencies:
+   D:\Desktop\云计算作业\movieRecommend\特征清洗及推荐算法\code\src\main\scala\com\pku\evanyang\movieScore.scala -> C:\Users\evanoneyang\.m2\repository\org\apache\spark\spark-core_2.11\2.1.2\spark-core_2.11-2.1.2.jar
+   D:\Desktop\云计算作业\movieRecommend\特征清洗及推荐算法\code\src\main\scala\com\pku\evanyang\movieScore.scala -> C:\Users\evanoneyang\.m2\repository\org\scala-lang\scala-library\2.11.8\scala-library-2.11.8.jar
+   D:\Desktop\云计算作业\movieRecommend\特征清洗及推荐算法\code\src\main\scala\com\pku\evanyang\movieScore.scala -> F:\jdk\jre\lib\rt.jar
+source dependencies:
+external dependencies:
+class names:
+   D:\Desktop\云计算作业\movieRecommend\特征清洗及推荐算法\code\src\main\scala\com\pku\evanyang\movieScore.scala -> com.pku.evanyang.movieScore
+   D:\Desktop\云计算作业\movieRecommend\特征清洗及推荐算法\code\src\main\scala\com\pku\evanyang\movieScore.scala -> com.pku.evanyang.movieScore$
+   D:\Desktop\云计算作业\movieRecommend\特征清洗及推荐算法\code\src\main\scala\com\pku\evanyang\movieScore.scala -> com.pku.evanyang.movieScore$$anonfun$1
+   D:\Desktop\云计算作业\movieRecommend\特征清洗及推荐算法\code\src\main\scala\com\pku\evanyang\movieScore.scala -> com.pku.evanyang.movieScore$$anonfun$2
+   D:\Desktop\云计算作业\movieRecommend\特征清洗及推荐算法\code\src\main\scala\com\pku\evanyang\movieScore.scala -> com.pku.evanyang.movieScore$$anonfun$2$$anonfun$apply$1
+   D:\Desktop\云计算作业\movieRecommend\特征清洗及推荐算法\code\src\main\scala\com\pku\evanyang\movieScore.scala -> com.pku.evanyang.movieScore$$anonfun$3
+   D:\Desktop\云计算作业\movieRecommend\特征清洗及推荐算法\code\src\main\scala\com\pku\evanyang\movieScore.scala -> com.pku.evanyang.movieScore$$anonfun$4

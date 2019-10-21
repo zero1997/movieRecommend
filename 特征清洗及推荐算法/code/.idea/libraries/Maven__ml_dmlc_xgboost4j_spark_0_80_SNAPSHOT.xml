@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: ml.dmlc:xgboost4j-spark:0.80-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/ml/dmlc/xgboost4j-spark/0.80-SNAPSHOT/xgboost4j-spark-0.80-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/ml/dmlc/xgboost4j-spark/0.80-SNAPSHOT/xgboost4j-spark-0.80-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/ml/dmlc/xgboost4j-spark/0.80-SNAPSHOT/xgboost4j-spark-0.80-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
