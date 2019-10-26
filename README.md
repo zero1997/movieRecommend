@@ -4,13 +4,13 @@
 
 #### 使用的技术栈
 
-- Python beautiful soup
+- Python3.7（由anaconda进行python环境管理）
+- beautifulsoup 4.8.0
 - Redis
-- Spark
-- Scala
-- Hadoop
-- HDFS
-- Django
+- Spark 2.1.2
+- Scala 2.11
+- Hadoop 2.6.0
+- Django 2.2.6
 - Mysql
 - Js
 - D3.js
