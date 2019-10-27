@@ -6,9 +6,9 @@
 
 | 节点编号  | Web服务器 | 数据库   | hadoop&Spark             |
 | ----- | ------ | ----- | ------------------------ |
-| node0 | √      |       | Datanode                 |
-| node1 |        | MySQL | Datanode                 |
-| node2 |        | Redis | Datanode                 |
+| node0 | √      |       | Datanode、NodeManager     |
+| node1 |        | MySQL | Datanode、NodeManager     |
+| node2 |        | Redis | Datanode、NodeManager     |
 | node3 |        |       | Namenode、ResourceManager |
 | node4 |        |       | SecondaryNamenode        |
 
