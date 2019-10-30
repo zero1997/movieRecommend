@@ -7,4 +7,13 @@
 
 
 # 环境
-## scrapy+selenium+pyvirtualdisplay
+## scrapy+selenium+firefox
+
+# 要安装的东西
+## scrapy
+## conda install selenium
+## 下载和安装 geckodriver
+### wget https://github.com/mozilla/geckodriver/releases/download/v0.26.0/geckodriver-v0.26.0-linux64.tar.gz
+### tar xvf geckodriver-v0.26.0-linux64.tar.gz 
+### mv geckodriver /usr/local/bin/
+## yum install firefox
