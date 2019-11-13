@@ -75,7 +75,10 @@ output
 input
 ```javascript
 {
-    
+    userid:
+    birth:
+    city:
+    sex:
 }
 ```
 output
@@ -98,10 +101,10 @@ output
 ```javascript
 {
     
-    code: 200,
-    data: {
-        message: "success"
-    }
+    userid:
+    birth:
+    city:
+    sex:
 }
 ```
 
