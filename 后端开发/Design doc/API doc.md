@@ -33,3 +33,147 @@ data.message: 请求处理消息
 + code=200 且 data.message!="success": 请求处理成功, 普通消息提示：message内容
 
 + code=500: 请求处理失败，警告消息提示：message内容
+
+### 1.2 Logout
+input
+```javascript
+{
+    userid
+}
+```
+output
+```javascript
+{
+    code: 200,
+    data: {
+        message: "success"
+    }
+}
+```
+
+### 1.3 Register
+input
+```javascript
+{
+    userid
+    password
+}
+```
+output
+```javascript
+{
+    code: 200,
+    data: {
+        message: "success"
+    }
+}
+```
+
+## 用户管理部分
+
+### 2.1 modifyUserInfo
+input
+```javascript
+{
+    
+}
+```
+output
+```javascript
+{
+    code: 200,
+    data: {
+        message: "success"
+    }
+}
+```
+### 2.2 getUserInfo 
+input
+```javascript
+{
+    userid
+}
+```
+output
+```javascript
+{
+    
+    code: 200,
+    data: {
+        message: "success"
+    }
+}
+```
+
+## 电影信息
+### 3.1 getRecommend
+input
+```javascript
+{
+    userid
+}
+```
+output
+```javascript
+[
+    {
+      movieid:
+      movieName:
+      score:
+      poster:
+    },
+    ......
+]
+```
+### 3.2 getMovieDetail
+input
+```javascript
+{
+    movieid
+}
+```
+output
+```javascript
+[
+    {
+      movieid:
+      movieName:
+      score:
+      poster:
+      director:
+      scripwriter:
+      mainActor:
+      filmType:
+      area:
+      language:
+      pubDate:
+      duration:
+      summary:
+      comments: [ ... ]
+      referenceUrl:
+    },
+    ......
+]
+```
+
+## 反馈信息
+### 4.1 sendLike
+input
+```javascript
+{
+    userid:
+    movieid:
+    like:
+    timestamp:
+}
+```
+output
+```javascript
+{
+    
+    code: 200,
+    data: {
+        message: "success"
+    }
+}
+```
