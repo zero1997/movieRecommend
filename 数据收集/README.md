@@ -20,6 +20,9 @@
 - sudo yum install firefox
 - sudo yum install unzip
 
-### 运行
+## 运行
 - 进入movieServer文件夹，直接运行movie.sh文件，带有两个参数，第一参数为开始电影序号，第二个参数为截止电影序号。
 例如./movie.sh 0 10000，抓起0～10000电影的数据。
+- 可以修改movie.sh脚本中关于每批数量、休眠时间等参数。
+
+
