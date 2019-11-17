@@ -9,7 +9,7 @@
 ## 环境
 - scrapy+selenium+firefox
 
-### 要安装的东西
+### 命令
 - conda install scrapy
 - conda install selenium
 - 下载和安装 geckodriver
@@ -19,3 +19,5 @@
 - sudo mv geckodriver /usr/local/bin/
 - sudo yum install firefox
 - sudo yum install unzip
+
+### 部署
