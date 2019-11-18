@@ -4,13 +4,13 @@
 
 ## 一、节点任务分配（计划）
 
-| 节点编号  | Web服务器 | 数据库          | hadoop&Spark&Zookeeper |
-| ----- | ------ | ------------ | ---------------------- |
-| node0 | √      |              | Datanode               |
-| node1 |        | MySQL        | Datanode               |
-| node2 |        | Redis        | Datanode               |
-| node3 |        | Hbase Master | Datanode               |
-| node4 |        |              | Master、Datanode        |
+| 节点编号 | Web服务器 | 数据库       | hadoop&Spark&Zookeeper |
+| -------- | --------- | ------------ | ---------------------- |
+| node0    | √         |              | Datanode               |
+| node1    |           | MySQL        | Datanode               |
+| node2    |           | Redis        | Datanode               |
+| node3    |           | Hbase Master | Datanode               |
+| node4    |           |              | Master、Datanode       |
 
 
 
@@ -18,6 +18,7 @@
 
 
 ## 二、进度安排
+
 ### 10.27
 
 完成各服务器python、Django、MySQL、Redis、java、scala等相关环境的搭建
@@ -219,8 +220,7 @@ sudo systemctl enable ntpd.service
 
 ### Zookeeper
 
-下载3.4.6
-在.bashrc中添加
+下载3.4.6，在.bashrc中添加
 
 ```
 # zookeeper
@@ -243,10 +243,26 @@ server.5=node4:2888:3888
 ```
 
 mkdir data
+
 mkdir logs
+
 echo 'x' > data/myid
 
+在leader和follower中先后使用zkServer.sh start 命令启动zookeeper集群
+
 ### hbase
+
+使用hadoop配置文件中的core-site.xml、hbase-env.sh、hbase-site.xml、hdfs-site.xml放入到\$HBASE_HOME/conf中，修改\$HBASE_HOME/conf/regionservers，类似于hadoop的slaves
+
+在~/.bashrc中添加如下内容
+
+```
+# hbase
+export HBASE_HOME=/usr/local/hbase-0.98.0-hadoop2
+export PATH=$PATH:$HBASE_HOME/bin
+```
+
+\$HBASE_HOME/bin/start-hbase.sh启动hbase
 
 hbase-daemon.sh start thrift
 
@@ -287,9 +303,13 @@ mysql> exit;
 ### redis in node2
 
 cd ~/wy/temp
+
 sudo vim /etc/redis.conf
+
 将bind 127.0.0.1改为： bind 0.0.0.0
+
 sudo systemctl start redis
+
 sudo systemctl enable redis
 
 ---
