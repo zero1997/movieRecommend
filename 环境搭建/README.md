@@ -10,7 +10,7 @@
 | node1 |        | MySQL        | Datanode               |
 | node2 |        | Redis        | Datanode               |
 | node3 |        | Hbase Master | Datanode               |
-| node4 |        |              | Master                 |
+| node4 |        |              | Master、Datanode        |
 
 
 
