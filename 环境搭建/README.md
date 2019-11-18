@@ -147,7 +147,7 @@ export SCALA_HOME=/usr/local/scala-2.11.12
 export PATH=$PATH:$SCALA_HOME/bin
 ```
 
-###hadoop
+### hadoop
 
 上传hadoop-2.6.0.tar.gz文件
 
@@ -167,7 +167,7 @@ sudo chown -R hadoop:hadoop /usr/local/hadoop-2.6.0/
 
 hdfs namenode -format
 
-###spark
+### spark
 
 在.bashrc中添加如下内容
 
