@@ -264,7 +264,7 @@ export PATH=$PATH:$HBASE_HOME/bin
 
 \$HBASE_HOME/bin/start-hbase.sh启动hbase
 
-hbase-daemon.sh start thrift
+hbase-daemon.sh start thrift 用来支持python访问hbase
 
 ---
 
