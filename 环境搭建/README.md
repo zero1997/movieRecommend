@@ -34,12 +34,14 @@
 
 完成Hbase的搭建
 
-# 运维笔记
+# 运维笔记（不完整版）
 
 ## 服务器情况
 
 内存总计约3.5G
+
 物理核数：1
+
 逻辑核数：2
 
 ---
@@ -47,9 +49,11 @@
 ## 使用root账号
 
 adduser hadoop
+
 passwd hadoop
 
 chmod u+w /etc/sudoers
+
 vim /etc/sudoers
 
 ```
@@ -65,12 +69,19 @@ su hadoop
 ## 使用hadoop账号
 
 cd ~
+
 sudo yum update
+
 sudo yum install -y tmux
+
 mkdir temp
+
 cd temp
+
 wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh
+
 sh Anaconda3-2019.10-Linux-x86_64.sh
+
 source ~/.bashrc
 
 cd ~
@@ -84,14 +95,19 @@ cd ~
 #### ssh-copy-id hadoop@host
 
 ssh-copy-id hadoop@39.98.136.163
+
 ssh-copy-id hadoop@39.100.226.136
+
 ssh-copy-id hadoop@47.92.67.19
+
 ssh-copy-id hadoop@39.99.140.90
+
 ssh-copy-id hadoop@39.98.135.249
 
 #### 更改hosts
 
 sudo chmod u+w /etc/hosts
+
 sudo vim /etc/hosts
 
 ```39.98.136.163	node0
@@ -134,6 +150,7 @@ export PATH=$PATH:$SCALA_HOME/bin
 ###hadoop
 
 上传hadoop-2.6.0.tar.gz文件
+
 在~/.bashrc中添加如下内容
 
 ```
@@ -145,6 +162,7 @@ export PATH=/usr/local/hadoop-2.6.0/bin/:$PATH
 ```
 
 sudo chown -R hadoop:hadoop /usr/local/hadoop-2.6.0/
+
 将本地的hadoop_conf中的配置文件逐个传到服务器端
 
 hdfs namenode -format
@@ -162,10 +180,13 @@ export PATH=${PATH}:${SPARK_HOME}/bin
 ```
 
 sudo tar -zxvf spark-2.1.2-bin-hadoop2.6.tgz -C /usr/local/
+
 cd /usr/local/
+
 chown -R hadoop:hadoop spark-2.1.2-bin-hadoop2.6
 
 更改了${SPARK_HOME}/conf/slaves
+
 类似于hadoop
 
 在conf/spark-env.sh
@@ -190,7 +211,9 @@ export SPARK_LIBARY_PATH=.:$JAVA_HOME/lib:$JAVA_HOME/jre/lib:$HADOOP_HOME/lib/na
 ### hadoop 时间同步
 
 sudo yum install -y ntp ntpdate
+
 sudo vi /etc/ntp.conf
+
 sudo systemctl enable ntpd.service
 
 
@@ -232,7 +255,9 @@ hbase-daemon.sh start thrift
 ### Django in node0
 
 pip install redis
+
 pip install PyMysql
+
 pip install Django
 
 ### mysql in node1
@@ -273,7 +298,9 @@ sudo systemctl enable redis
 
 
 yum install mysql-server
+
 hadoop-env.sh
+
 export HADOOP_SSH_OPTS="-p 16022"
 
 echo "Port 11022" >> /etc/ssh/sshd_config
