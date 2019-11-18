@@ -238,15 +238,25 @@ pip install Django
 ### mysql in node1
 
 cd ~/wy/temp
+
 wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+
 rpm -ivh mysql-community-release-el7-5.noarch.rpm
+
 yum update
+
 yum install mysql-server
+
 sudo systemctl start mysqld
+
 sudo systemctl enable mysqld
+
 mysql
+
 mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
+
 mysql> FLUSH PRIVILEGES;
+
 mysql> exit;
 
 ### redis in node2
