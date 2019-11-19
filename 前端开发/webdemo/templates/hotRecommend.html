@@ -1,0 +1,431 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Home</title>
+		<link href="/static/css/style1.css" rel='stylesheet' type='text/css' />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="/static/image/x-icon" href="/static/images/fav-icon.png" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		</script>
+		<!----webfonts---->
+		<link href='http://fonts.useso.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+		<!----//webfonts---->
+		<!-- Global CSS for the page and tiles -->
+  		<link rel="stylesheet" href="/static/css/main.css">
+  		<!-- //Global CSS for the page and tiles -->
+		<!---start-click-drop-down-menu----->
+		<script src="/static/js/jquery.min.js"></script>
+        <!----start-dropdown--->
+         <script type="text/javascript">
+			var $ = jQuery.noConflict();
+				$(function() {
+					$('#activator').click(function(){
+						$('#box').animate({'top':'0px'},500);
+					});
+					$('#boxclose').click(function(){
+					$('#box').animate({'top':'-700px'},500);
+					});
+				});
+				$(document).ready(function(){
+				//Hide (Collapse) the toggle containers on load
+				$(".toggle_container").hide(); 
+				//Switch the "Open" and "Close" state per click then slide up/down (depending on open/close state)
+				$(".trigger").click(function(){
+					$(this).toggleClass("active").next().slideToggle("slow");
+						return false; //Prevent the browser jump to the link anchor
+				});
+									
+			});
+		</script>
+		<link rel="stylesheet" type="text/css" href="/static/css/base.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="/static/css/button.css" media="screen">
+		<style type="text/css">
+        .top{
+    /* 设置宽度高度背景颜色 */
+    height: auto; /*高度改为自动高度*/
+    width:100%;
+    margin-left: 0;
+    background:rgb(189, 181, 181);
+    position: fixed; /*固定在顶部*/
+    top: 0;/*离顶部的距离为0*/
+    margin-bottom: 5px;
+    z-index:9999;
+}
+.top ul{
+    /* 清除ul标签的默认样式 */
+    width: auto;/*宽度也改为自动*/
+    list-style-type: none;
+    white-space:nowrap;
+    overflow: hidden;
+    margin-left: 5%;
+    /* margin-top: 0;          */
+    padding: 0;
+
+}
+.top li {
+    float:left; /* 使li内容横向浮动，即横向排列  */
+    margin-right:2%;  /* 两个li之间的距离*/
+    position: relative;
+    overflow: hidden;
+}
+
+.top li a{
+   /* 设置链接内容显示的格式*/
+    display: block; /* 把链接显示为块元素可使整个链接区域可点击 */
+    color:white;
+    text-align: center;
+    padding: 3px;
+    overflow: hidden;
+    text-decoration: none; /* 去除下划线 */
+
+}
+.top li a:hover{
+    /* 鼠标选中时背景变为黑色 */
+    background-color: #111;
+}
+.top ul li ul{
+    /* 设置二级菜单 */
+    margin-left: -0.2px;
+    background:rgb(189, 181, 181);
+    position: relative;
+    display: none; /* 默认隐藏二级菜单的内容 */
+
+}
+.top ul li ul li{
+    /* 二级菜单li内容的显示 */
+
+    float:none;
+    text-align: center;
+}
+.top ul li:hover ul{
+    /* 鼠标选中二级菜单内容时 */
+    display: block;
+}
+body{
+    background:#eff3f5;
+}
+
+       </style>
+        <!----//End-dropdown--->
+		<!---//End-click-drop-down-menu----->
+	</head>
+	<body>
+		<!---start-wrap---->
+			<!---start-header---->
+			<div class="top">
+                   <center>
+                    <ul>
+                    <li>电影推荐系统</li>
+
+                      </ul>
+                    </center>
+            </div>
+
+		</div>
+		<!---//End-header---->
+		<!---start-content---->
+		<div class="content">
+			<div class="wrap">
+			 <div id="main" role="main">
+			      <ul id="tiles">
+			        <!-- These are our grid blocks -->
+			        <li onclick="location.href='single-page.html';">
+			        	<img src="{{src}}" width="200" height="200">
+			        	<div class="post-info">
+			        		<div class="post-basic-info">
+				        		<h3><a href="#">Animation films</a></h3>
+				        		<span><a href="#"><label> </label>Movies</a></span>
+				        		<p>Lorem Ipsum is simply dummy text of the printing & typesetting industry.</p>
+			        		</div>
+			        		<div class="post-info-rate-share">
+			        			<div class="rateit">
+			        				<span> </span>
+			        			</div>
+			        			<div class="post-share">
+			        				<span> </span>
+			        			</div>
+			        			<div class="clear"> </div>
+			        		</div>
+			        	</div>
+			        </li>
+			        <li onclick="location.href='single-page.html';">
+			        	<img src="/static/images/img2.jpg" width="200" height="299">
+						<div class="post-info">
+			        		<div class="post-basic-info">
+				        		<h3><a href="#">Animation films</a></h3>
+				        		<span><a href="#"><label> </label>Movies</a></span>
+				        		<p>Lorem Ipsum is simply dummy text of the printing & typesetting industry.</p>
+			        		</div>
+			        		<div class="post-info-rate-share">
+			        			<div class="rateit">
+			        				<span> </span>
+			        			</div>
+			        			<div class="post-share">
+			        				<span> </span>
+			        			</div>
+			        			<div class="clear"> </div>
+			        		</div>
+			        	</div>
+					</li>
+			        <li onclick="location.href='single-page.html';">
+			        	<img src="/static/images/img3.jpg" width="200" height="214">
+			        	<div class="post-info">
+			        		<div class="post-basic-info">
+				        		<h3><a href="#">Animation films</a></h3>
+				        		<span><a href="#"><label> </label>Movies</a></span>
+				        		<p>Lorem Ipsum is simply dummy text of the printing & typesetting industry.</p>
+			        		</div>
+			        		<div class="post-info-rate-share">
+			        			<div class="rateit">
+			        				<span> </span>
+			        			</div>
+			        			<div class="post-share">
+			        				<span> </span>
+			        			</div>
+			        			<div class="clear"> </div>
+			        		</div>
+			        	</div>
+			        </li>
+			        <li onclick="location.href='single-page.html';">
+			        	<img src="/static/images/img4.jpg" width="200" height="333">
+			        	<div class="post-info">
+			        		<div class="post-basic-info">
+				        		<h3><a href="#">Animation films</a></h3>
+				        		<span><a href="#"><label> </label>Movies</a></span>
+				        		<p>Lorem Ipsum is simply dummy text of the printing & typesetting industry.</p>
+			        		</div>
+			        		<div class="post-info-rate-share">
+			        			<div class="rateit">
+			        				<span> </span>
+			        			</div>
+			        			<div class="post-share">
+			        				<span> </span>
+			        			</div>
+			        			<div class="clear"> </div>
+			        		</div>
+			        	</div>
+			        </li>
+			        <!----//--->
+			        <li onclick="location.href='single-page.html';">
+			        	<img src="/static/images/img4.jpg" width="200" height="333">
+			        	<div class="post-info">
+			        		<div class="post-basic-info">
+				        		<h3><a href="#">Animation films</a></h3>
+				        		<span><a href="#"><label> </label>Movies</a></span>
+				        		<p>Lorem Ipsum is simply dummy text of the printing & typesetting industry.</p>
+			        		</div>
+			        		<div class="post-info-rate-share">
+			        			<div class="rateit">
+			        				<span> </span>
+			        			</div>
+			        			<div class="post-share">
+			        				<span> </span>
+			        			</div>
+			        			<div class="clear"> </div>
+			        		</div>
+			        	</div>
+			        </li>
+			        <li onclick="location.href='single-page.html';">
+			        	<img src="/static/images/img3.jpg" width="200" height="214">
+			        	<div class="post-info">
+			        		<div class="post-basic-info">
+				        		<h3><a href="#">Animation films</a></h3>
+				        		<span><a href="#"><label> </label>Movies</a></span>
+				        		<p>Lorem Ipsum is simply dummy text of the printing & typesetting industry.</p>
+			        		</div>
+			        		<div class="post-info-rate-share">
+			        			<div class="rateit">
+			        				<span> </span>
+			        			</div>
+			        			<div class="post-share">
+			        				<span> </span>
+			        			</div>
+			        			<div class="clear"> </div>
+			        		</div>
+			        	</div>
+			        </li>
+			        <li onclick="location.href='single-page.html';">
+			        	<img src="/static/images/img2.jpg" width="200" height="299">
+						<div class="post-info">
+			        		<div class="post-basic-info">
+				        		<h3><a href="#">Animation films</a></h3>
+				        		<span><a href="#"><label> </label>Movies</a></span>
+				        		<p>Lorem Ipsum is simply dummy text of the printing & typesetting industry.</p>
+			        		</div>
+			        		<div class="post-info-rate-share">
+			        			<div class="rateit">
+			        				<span> </span>
+			        			</div>
+			        			<div class="post-share">
+			        				<span> </span>
+			        			</div>
+			        			<div class="clear"> </div>
+			        		</div>
+			        	</div>
+					</li>
+					  <li onclick="location.href='single-page.html';">
+			        	<img src="/static/images/img1.jpg" width="200" height="200">
+			        	<div class="post-info">
+			        		<div class="post-basic-info">
+				        		<h3><a href="#">Animation films</a></h3>
+				        		<span><a href="#"><label> </label>Movies</a></span>
+				        		<p>Lorem Ipsum is simply dummy text of the printing & typesetting industry.</p>
+			        		</div>
+			        		<div class="post-info-rate-share">
+			        			<div class="rateit">
+			        				<span> </span>
+			        			</div>
+			        			<div class="post-share">
+			        				<span> </span>
+			        			</div>
+			        			<div class="clear"> </div>
+			        		</div>
+			        	</div>
+			        </li>
+			        <!----//--->
+			         <li onclick="location.href='single-page.html';">
+			        	<img src="/static/images/img1.jpg" width="200" height="200">
+			        	<div class="post-info">
+			        		<div class="post-basic-info">
+				        		<h3><a href="#">Animation films</a></h3>
+				        		<span><a href="#"><label> </label>Movies</a></span>
+				        		<p>Lorem Ipsum is simply dummy text of the printing & typesetting industry.</p>
+			        		</div>
+			        		<div class="post-info-rate-share">
+			        			<div class="rateit">
+			        				<span> </span>
+			        			</div>
+			        			<div class="post-share">
+			        				<span> </span>
+			        			</div>
+			        			<div class="clear"> </div>
+			        		</div>
+			        	</div>
+			        </li>
+			        <li onclick="location.href='single-page.html';">
+			        	<img src="/static/images/img2.jpg" width="200" height="299">
+						<div class="post-info">
+			        		<div class="post-basic-info">
+				        		<h3><a href="#">Animation films</a></h3>
+				        		<span><a href="#"><label> </label>Movies</a></span>
+				        		<p>Lorem Ipsum is simply dummy text of the printing & typesetting industry.</p>
+			        		</div>
+			        		<div class="post-info-rate-share">
+			        			<div class="rateit">
+			        				<span> </span>
+			        			</div>
+			        			<div class="post-share">
+			        				<span> </span>
+			        			</div>
+			        			<div class="clear"> </div>
+			        		</div>
+			        	</div>
+					</li>
+			        <li onclick="location.href='single-page.html';">
+			        	<img src="/static/images/img3.jpg" width="200" height="214">
+			        	<div class="post-info">
+			        		<div class="post-basic-info">
+				        		<h3><a href="#">Animation films</a></h3>
+				        		<span><a href="#"><label> </label>Movies</a></span>
+				        		<p>Lorem Ipsum is simply dummy text of the printing & typesetting industry.</p>
+			        		</div>
+			        		<div class="post-info-rate-share">
+			        			<div class="rateit">
+			        				<span> </span>
+			        			</div>
+			        			<div class="post-share">
+			        				<span> </span>
+			        			</div>
+			        			<div class="clear"> </div>
+			        		</div>
+			        	</div>
+			        </li>
+			        <li onclick="location.href='single-page.html';">
+			        	<img src="/static/images/img4.jpg" width="200" height="333">
+			        	<div class="post-info">
+			        		<div class="post-basic-info">
+				        		<h3><a href="#">Animation films</a></h3>
+				        		<span><a href="#"><label> </label>Movies</a></span>
+				        		<p>Lorem Ipsum is simply dummy text of the printing & typesetting industry.</p>
+			        		</div>
+			        		<div class="post-info-rate-share">
+			        			<div class="rateit">
+			        				<span> </span>
+			        			</div>
+			        			<div class="post-share">
+			        				<span> </span>
+			        			</div>
+			        			<div class="clear"> </div>
+			        		</div>
+			        	</div>
+			        </li>
+			        <!-- End of grid blocks -->
+			      </ul>
+			    </div>
+			</div>
+		</div>
+		<!---//End-content---->
+		<!----wookmark-scripts---->
+		  <script src="/static/js/jquery.imagesloaded.js"></script>
+		  <script src="/static/js/jquery.wookmark.js"></script>
+		  <script type="text/javascript">
+		    (function ($){
+		      var $tiles = $('#tiles'),
+		          $handler = $('li', $tiles),
+		          $main = $('#main'),
+		          $window = $(window),
+		          $document = $(document),
+		          options = {
+		            autoResize: true, // This will auto-update the layout when the browser window is resized.
+		            container: $main, // Optional, used for some extra CSS styling
+		            offset: 20, // Optional, the distance between grid items
+		            itemWidth:280 // Optional, the width of a grid item
+		          };
+		      /**
+		       * Reinitializes the wookmark handler after all images have loaded
+		       */
+		      function applyLayout() {
+		        $tiles.imagesLoaded(function() {
+		          // Destroy the old handler
+		          if ($handler.wookmarkInstance) {
+		            $handler.wookmarkInstance.clear();
+		          }
+
+		          // Create a new layout handler.
+		          $handler = $('li', $tiles);
+		          $handler.wookmark(options);
+		        });
+		      }
+		      /**
+		       * When scrolled all the way to the bottom, add more tiles
+		       */
+		      function onScroll() {
+		        // Check if we're within 100 pixels of the bottom edge of the broser window.
+		        var winHeight = window.innerHeight ? window.innerHeight : $window.height(), // iphone fix
+		            closeToBottom = ($window.scrollTop() + winHeight > $document.height() - 100);
+
+		        if (closeToBottom) {
+		          // Get the first then items from the grid, clone them, and add them to the bottom of the grid
+		          var $items = $('li', $tiles),
+		              $firstTen = $items.slice(0, 10);
+		          $tiles.append($firstTen.clone());
+
+		          applyLayout();
+		        }
+		      };
+
+		      // Call the layout function for the first time
+		      applyLayout();
+
+		      // Capture scroll event.
+		      $window.bind('scroll.wookmark', onScroll);
+		    })(jQuery);
+		  </script>
+		<!----//wookmark-scripts---->
+		<!----start-footer--->
+		
+		<!----//End-footer--->
+		<!---//End-wrap---->
+	</body>
+</html>
+

@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+	<link href="/static/css/style1.css" rel='stylesheet' type='/static/text/css' />
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="/static/css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="/static/css/icomoon.css">
+	<!-- Themify Icons-->
+	<link rel="stylesheet" href="/static/css/themify-icons.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="/static/css/bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="/static/css/magnific-popup.css">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="/static/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="/static/css/owl.theme.default.min.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="/static/css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="/static/js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="/static/js/respond.min.js"></script>
+	<![endif]-->
+
+		<style type="text/css">
+        .top{
+    /* 设置宽度高度背景颜色 */
+    height: auto; /*高度改为自动高度*/
+    width:100%;
+    margin-left: 0;
+    background:rgb(189, 181, 181);
+    position: fixed; /*固定在顶部*/
+    top: 0;/*离顶部的距离为0*/
+    margin-bottom: 5px;
+    z-index:9999;
+}
+.top ul{
+    /* 清除ul标签的默认样式 */
+    width: auto;/*宽度也改为自动*/
+    list-style-type: none;
+    white-space:nowrap;
+    overflow: hidden;
+    margin-left: 5%;
+    /* margin-top: 0;          */
+    padding: 0;
+
+}
+.top li {
+    float:left; /* 使li内容横向浮动，即横向排列  */
+    margin-right:2%;  /* 两个li之间的距离*/
+    position: relative;
+    overflow: hidden;
+}
+
+.top li a{
+   /* 设置链接内容显示的格式*/
+    display: block; /* 把链接显示为块元素可使整个链接区域可点击 */
+    color:white;
+    text-align: center;
+    padding: 3px;
+    overflow: hidden;
+    text-decoration: none; /* 去除下划线 */
+
+}
+.top li a:hover{
+    /* 鼠标选中时背景变为黑色 */
+    background-color: #111;
+}
+.top ul li ul{
+    /* 设置二级菜单 */
+    margin-left: -0.2px;
+    background:rgb(189, 181, 181);
+    position: relative;
+    display: none; /* 默认隐藏二级菜单的内容 */
+
+}
+.top ul li ul li{
+    /* 二级菜单li内容的显示 */
+
+    float:none;
+    text-align: center;
+}
+.top ul li:hover ul{
+    /* 鼠标选中二级菜单内容时 */
+    display: block;
+}
+body{
+    background:#eff3f5;
+}
+
+       </style>
+
+	</head>
+	<body>
+<form method="post" action="{% url 'showDetail' %}">
+							{%csrf_token%}
+						<div class="row form-group">
+							<div class="col-md-12">
+								<input type="hidden"  name="movieid" value="{{ m.movieid }}" />
+								<input src="{{ m.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+							<div class="col-md-12">
+								<output type="text" name="{{ m.moviename   }}" class="form-control"value="{{ m.moviename   }}">电影名：{{ m.moviename }}   </output>
+							</div>
+								<div class="col-md-12">
+								<output type="text" name="{{ m.score   }}" class="form-control"value="{{ m.score   }}">评分：{{ m.score }}   </output>
+							</div>
+
+						</div>
+
+	</body>
+</html>
+

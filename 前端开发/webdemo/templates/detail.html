@@ -1,0 +1,389 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>single-page</title>
+		<link href="/static/css/style1.css" rel='stylesheet' type='text/css' />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="/static/image/x-icon" href="/static/images/fav-icon.png" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		</script>
+		<!----webfonts---->
+		<link href='http://fonts.useso.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+		<!----//webfonts---->
+		<!---start-click-drop-down-menu----->
+		<script src="/static/js/jquery1.min.js"></script>
+        <!----start-dropdown--->
+         <script type="text/javascript">
+			var $ = jQuery.noConflict();
+				$(function() {
+					$('#activator').click(function(){
+						$('#box').animate({'top':'0px'},500);
+					});
+					$('#boxclose').click(function(){
+					$('#box').animate({'top':'-700px'},500);
+					});
+				});
+				$(document).ready(function(){
+				//Hide (Collapse) the toggle containers on load
+				$(".toggle_container").hide();
+				//Switch the "Open" and "Close" state per click then slide up/down (depending on open/close state)
+				$(".trigger").click(function(){
+					$(this).toggleClass("active").next().slideToggle("slow");
+						return false; //Prevent the browser jump to the link anchor
+				});
+
+			});
+		</script>
+
+        <!----//End-dropdown--->
+		<style type="text/css">
+.demo{width:760px; margin:20px auto 0 auto; height:70px;}
+.button {
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 16px/100% 'Microsoft yahei',Arial, Helvetica, sans-serif;
+	padding: .5em 2em .55em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	-webkit-border-radius: .5em;
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+.button:hover {
+	text-decoration: none;
+}
+.button:active {
+	position: relative;
+	top: 1px;
+}
+.bigrounded {
+	-webkit-border-radius: 2em;
+	-moz-border-radius: 2em;
+	border-radius: 2em;
+}
+.medium {
+	font-size: 12px;
+	padding: .4em 1.5em .42em;
+}
+.small {
+	font-size: 11px;
+	padding: .2em 1em .275em;
+}
+
+
+/* blue */
+.blue {
+	color: #d9eef7;
+	border: solid 1px #0076a3;
+	background: #0095cd;
+	background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+	background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');
+}
+.blue:hover {
+	background: #007ead;
+	background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+	background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#0095cc', endColorstr='#00678e');
+}
+.blue:active {
+	color: #80bed6;
+	background: -webkit-gradient(linear, left top, left bottom, from(#0078a5), to(#00adee));
+	background: -moz-linear-gradient(top,  #0078a5,  #00adee);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#0078a5', endColorstr='#00adee');
+}
+
+/* green */
+.green {
+	color: #e8f0de;
+	border: solid 1px #538312;
+	background: #64991e;
+	background: -webkit-gradient(linear, left top, left bottom, from(#7db72f), to(#4e7d0e));
+	background: -moz-linear-gradient(top,  #7db72f,  #4e7d0e);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#7db72f', endColorstr='#4e7d0e');
+}
+.green:hover {
+	background: #538018;
+	background: -webkit-gradient(linear, left top, left bottom, from(#6b9d28), to(#436b0c));
+	background: -moz-linear-gradient(top,  #6b9d28,  #436b0c);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#6b9d28', endColorstr='#436b0c');
+}
+.green:active {
+	color: #a9c08c;
+	background: -webkit-gradient(linear, left top, left bottom, from(#4e7d0e), to(#7db72f));
+	background: -moz-linear-gradient(top,  #4e7d0e,  #7db72f);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#4e7d0e', endColorstr='#7db72f');
+}
+
+/* white */
+.white {
+	color: #606060;
+	border: solid 1px #b7b7b7;
+	background: #fff;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ededed));
+	background: -moz-linear-gradient(top,  #fff,  #ededed);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed');
+}
+.white:hover {
+	background: #ededed;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#dcdcdc));
+	background: -moz-linear-gradient(top,  #fff,  #dcdcdc);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dcdcdc');
+}
+.white:active {
+	color: #999;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#fff));
+	background: -moz-linear-gradient(top,  #ededed,  #fff);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#ffffff');
+}
+
+/* orange */
+.orange {
+	color: #fef4e9;
+	border: solid 1px #da7c0c;
+	background: #f78d1d;
+	background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
+	background: -moz-linear-gradient(top,  #faa51a,  #f47a20);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
+}
+.orange:hover {
+	background: #f47c20;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f88e11), to(#f06015));
+	background: -moz-linear-gradient(top,  #f88e11,  #f06015);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f88e11', endColorstr='#f06015');
+}
+.orange:active {
+	color: #fcd3a5;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f47a20), to(#faa51a));
+	background: -moz-linear-gradient(top,  #f47a20,  #faa51a);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f47a20', endColorstr='#faa51a');
+}
+
+</style>
+		<style type="text/css">
+        .top{
+    /* 设置宽度高度背景颜色 */
+    height: auto; /*高度改为自动高度*/
+    width:100%;
+    margin-left: 0;
+    background:rgb(189, 181, 181);
+    position: fixed; /*固定在顶部*/
+    top: 0;/*离顶部的距离为0*/
+    margin-bottom: 5px;
+    z-index:9999;
+}
+.top ul{
+    /* 清除ul标签的默认样式 */
+    width: auto;/*宽度也改为自动*/
+    list-style-type: none;
+    white-space:nowrap;
+    overflow: hidden;
+    margin-left: 5%;
+    /* margin-top: 0;          */
+    padding: 0;
+
+}
+.top li {
+    float:left; /* 使li内容横向浮动，即横向排列  */
+    margin-right:2%;  /* 两个li之间的距离*/
+    position: relative;
+    overflow: hidden;
+}
+
+.top li a{
+   /* 设置链接内容显示的格式*/
+    display: block; /* 把链接显示为块元素可使整个链接区域可点击 */
+    color:white;
+    text-align: center;
+    padding: 3px;
+    overflow: hidden;
+    text-decoration: none; /* 去除下划线 */
+
+}
+.top li a:hover{
+    /* 鼠标选中时背景变为黑色 */
+    background-color: #111;
+}
+.top ul li ul{
+    /* 设置二级菜单 */
+    margin-left: -0.2px;
+    background:rgb(189, 181, 181);
+    position: relative;
+    display: none; /* 默认隐藏二级菜单的内容 */
+
+}
+.top ul li ul li{
+    /* 二级菜单li内容的显示 */
+
+    float:none;
+    text-align: center;
+}
+.top ul li:hover ul{
+    /* 鼠标选中二级菜单内容时 */
+    display: block;
+}
+body{
+    background:#eff3f5;
+}
+
+       </style>
+	</head>
+	<body>
+		<!---start-wrap---->
+			<!---start-header---->
+<div class="top">
+                   <center>
+                    <ul>
+                    <li>电影推荐系统</li>
+
+                      </ul>
+                    </center>
+            </div>
+
+		</div>
+		<!---//End-header---->
+		<!---start-content---->
+
+			<div class="wrap">
+			<div class="single-page">
+				<img src="{{poster}}" width="250px" height="400px" >
+
+								<div class="row form-group">
+							<div class="row form-group">
+							<div class="col-md-12">
+								<font size="4">电影名：</font><output type="text" name="movieName" class="form-control"value="{{ movieName}}">{{ movieName}}</output>
+							</div>
+
+						</div>
+		<div class="content">
+			<div class="row form-group">
+							<div class="col-md-12">
+								<font size="4">评分：</font><output type="text" name="score" class="form-control"value="{{ score}}">{{ score}}</output>
+							</div>
+
+						</div>
+
+		<div class="content">
+			<div class="row form-group">
+							<div class="col-md-12">
+								<font size="4">导演：</font><output type="text" name="director" class="form-control"value="{{ director}}">{{ director}}</output>
+							</div>
+
+						</div>
+		<div class="content">
+			<div class="row form-group">
+							<div class="col-md-12">
+								<font size="4">编剧：</font><output type="text" name="scripwriter" class="form-control"value="{{ scripwriter}}">{{ scripwriter}}</output>
+							</div>
+
+						</div>
+		<div class="content"><div class="row form-group">
+							<div class="col-md-12">
+								<font size="4">主演：</font><output type="text" name="mainActor" class="form-control"value="{{ mainActor}}">{{mainActor}}</output>
+							</div>
+
+						</div>
+		<div class="content"><div class="row form-group">
+							<div class="col-md-12">
+								<font size="4">电影类型：</font><output type="text" name="filmType" class="form-control"value="{{ filmType}}">{{ filmType}}</output>
+							</div>
+
+						</div>
+		<div class="content"><div class="row form-group">
+							<div class="col-md-12">
+								<font size="4">地区：</font><output type="text" name="area" class="form-control"value="{{area}}">{{ area}}</output>
+							</div>
+
+						</div>
+		<div class="content"><div class="row form-group">
+							<div class="col-md-12">
+								<font size="4">语言：</font><output type="text" name="language" class="form-control"value="{{language}}">{{language}}</output>
+							</div>
+
+						</div>
+		<div class="content"><div class="row form-group">
+							<div class="col-md-12">
+								<font size="4">发行时间：</font><output type="text" name="pubDate" class="form-control"value="{{ pubDate}}">{{ pubDate}}</output>
+							</div>
+
+						</div>
+		<div class="content"><div class="row form-group">
+							<div class="col-md-12">
+								<font size="4">时长：</font><output type="text" name="duration" class="form-control"value="{{ duration}}">{{ duration}}</output>
+							</div>
+
+						</div>
+		<div class="content"><div class="row form-group">
+							<div class="col-md-12">
+								<font size="4">总结：</font><output type="text" name="summary" class="form-control"value="{{ summary}}">{{ summary}}</output>
+							</div>
+
+						</div>
+		<div class="content"><div class="row form-group">
+							<div class="col-md-12">
+								<font size="4">评论：</font><output type="text" name="comments" class="form-control"value="{{ comments}}">{{ comments}}</output>
+							</div>
+
+						</div>
+
+						</div>
+
+		  						 <div class="clear"> </div>
+							</div>
+							<!---start-comments-section--->
+							<div class="comment-section">
+				<div class="grids_of_2">
+
+
+						<div class="row form-group">
+													<div class="col-md-12">
+														<a href={{ referenceUrl}} ><input class="button green" type="submit" value="喜欢" /></a>
+
+
+
+													</div>
+												</div>
+
+
+
+					<form method="post" action="{% url 'dislike' %}">
+												{%csrf_token%}
+						<div class="row form-group">
+													<div class="col-md-12">
+														<input class="button orange" type="submit" value="无感" />
+
+													</div>
+												</div>
+
+					</form>
+
+					</div>
+			</div>
+							<!---//End-comments-section--->
+						</div>
+						 </div>
+		</div>
+		<!----start-footer--->
+
+		<!----//End-footer--->
+		<!---//End-wrap---->
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>
+			</div>
+			</div>
+
+	</body>
+</html>
+
