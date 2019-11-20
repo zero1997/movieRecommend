@@ -274,24 +274,28 @@ body{
 			<div class="row form-group">
 				<div class="col-md-12">
                     <input class="button white" type="submit" value="查看个人信息" />
-
 				</div>
 			</div>
 		</form>
 
-		<a href="javascript:;" class="changeBnt" id="xxlChg"><i></i>换一换</a></div>
+		<div><a href="javascript:;" class="changeBnt" id="xxlChg"><i></i>下一页</a></div>
+	</div>
+
+	<div class="hd">
+		<div class="col-md-12" > <a href="javascript:window.location.reload();" class="changeBnt" id="xxlChg2"><i></i>换一批</a></div>
+	</div>
 		<div class="bd">
 		<ul class="picLB" id="picLBxxl">
 			<li>
 				<dl class="picDl huozhe">
 
 					<dd>
-						<form method="post" action="{% url 'showDetail0' %}">
+						<form method="post" action="{% url 'showDetail' %}">
 							{%csrf_token%}
 						<div class="row form-group">
 							<div class="col-md-12">
-								 <input type="hidden" name="movieid0" value={{ movie0.movieid   }} />
-								<input src="{{ m.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+								 <input type="hidden" name="movieid" value={{ movie0.movieid   }} />
+								<input src="{{ movie0.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
 
 
 								<div class="col-md-12">
@@ -306,12 +310,12 @@ body{
 						</form>
 					</dd>
 					<dd>
-						<form method="post" action="{% url 'showDetail1' %}">
+						<form method="post" action="{% url 'showDetail' %}">
 							{%csrf_token%}
 						<div class="row form-group">
 							<div class="col-md-12">
-								 <input type="hidden" name="movieid1" value={{ movie1.movieid   }} />
-								<input src="{{ m.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+								 <input type="hidden" name="movieid" value={{ movie1.movieid   }} />
+								<input src="{{ movie1.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
 
 
 								<div class="col-md-12">
@@ -326,12 +330,12 @@ body{
 						</form>
 					</dd>
 					<dd>
-						<form method="post" action="{% url 'showDetail2' %}">
+						<form method="post" action="{% url 'showDetail' %}">
 							{%csrf_token%}
 						<div class="row form-group">
 							<div class="col-md-12">
-								 <input type="hidden" name="movieid2" value={{ movie2.movieid   }} />
-								<input src="{{ m.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+								 <input type="hidden" name="movieid" value={{ movie2.movieid   }} />
+								<input src="{{ movie2.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
 
 
 								<div class="col-md-12">
@@ -350,12 +354,12 @@ body{
 			<li>
 				<dl class="picDl jilu">
 					<dd>
-						<form method="post" action="{% url 'showDetail3' %}">
+						<form method="post" action="{% url 'showDetail' %}">
 							{%csrf_token%}
 						<div class="row form-group">
 							<div class="col-md-12">
-								 <input type="hidden" name="movieid3" value={{ movie3.movieid   }} />
-								<input src="{{ m.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+								 <input type="hidden" name="movieid" value={{ movie3.movieid   }} />
+								<input src="{{ movie3.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
 
 
 								<div class="col-md-12">
@@ -370,12 +374,12 @@ body{
 							</form>
 					</dd>
 					<dd>
-						<form method="post" action="{% url 'showDetail4' %}">
+						<form method="post" action="{% url 'showDetail' %}">
 							{%csrf_token%}
 						<div class="row form-group">
 							<div class="col-md-12">
-								 <input type="hidden" name="movieid4" value={{ movie4.movieid   }} />
-								<input src="{{ m.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+								 <input type="hidden" name="movieid" value={{ movie4.movieid   }} />
+								<input src="{{ movie4.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
 
 
 								<div class="col-md-12">
@@ -390,12 +394,12 @@ body{
 							</form>
 					</dd>
 					<dd>
-						<form method="post" action="{% url 'showDetail5' %}">
+						<form method="post" action="{% url 'showDetail' %}">
 							{%csrf_token%}
 						<div class="row form-group">
 							<div class="col-md-12">
-								 <input type="hidden" name="movieid5" value={{ movie5.movieid   }} />
-								<input src="{{ m.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+								 <input type="hidden" name="movieid" value={{ movie5.movieid   }} />
+								<input src="{{ movie5.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
 
 
 								<div class="col-md-12">
@@ -414,12 +418,12 @@ body{
 			<li>
 				<dl class="picDl tuhua">
 					<dd>
-						<form method="post" action="{% url 'showDetail6' %}">
+						<form method="post" action="{% url 'showDetail' %}">
 							{%csrf_token%}
 						<div class="row form-group">
 							<div class="col-md-12">
-								 <input type="hidden" name="movieid6" value={{ movie6.movieid   }} />
-								<input src="{{ m.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+								 <input type="hidden" name="movieid" value={{ movie6.movieid   }} />
+								<input src="{{ movie6.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
 
 
 								<div class="col-md-12">
@@ -434,12 +438,12 @@ body{
 							</form>
 					</dd>
 					<dd>
-						<form method="post" action="{% url 'showDetail7' %}">
+						<form method="post" action="{% url 'showDetail' %}">
 							{%csrf_token%}
 						<div class="row form-group">
 							<div class="col-md-12">
-								 <input type="hidden" name="movieid7" value={{ movie7.movieid   }} />
-								<input src="{{ m.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+								 <input type="hidden" name="movieid" value={{ movie7.movieid   }} />
+								<input src="{{ movie7.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
 
 
 								<div class="col-md-12">
@@ -454,12 +458,12 @@ body{
 							</form>
 					</dd>
 					<dd>
-						<form method="post" action="{% url 'showDetail8' %}">
+						<form method="post" action="{% url 'showDetail' %}">
 							{%csrf_token%}
 						<div class="row form-group">
 							<div class="col-md-12">
-								 <input type="hidden" name="movieid8" value={{ movie8.movieid   }} />
-								<input src="{{ m.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+								 <input type="hidden" name="movieid" value={{ movie8.movieid   }} />
+								<input src="{{ movie8.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
 
 
 								<div class="col-md-12">
@@ -478,12 +482,12 @@ body{
 			<li>
 				<dl class="picDl today">
 					<dd>
-						<form method="post" action="{% url 'showDetail9' %}">
+						<form method="post" action="{% url 'showDetail' %}">
 							{%csrf_token%}
 						<div class="row form-group">
 							<div class="col-md-12">
-								 <input type="hidden" name="movieid9" value={{ movie9.movieid   }} />
-								<input src="{{ m.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+								 <input type="hidden" name="movieid" value={{ movie9.movieid   }} />
+								<input src="{{ movie9.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
 
 
 								<div class="col-md-12">
@@ -498,12 +502,12 @@ body{
 
 					</dd>
 					<dd>
-						<form method="post" action="{% url 'showDetail10' %}">
+						<form method="post" action="{% url 'showDetail' %}">
 							{%csrf_token%}
 						<div class="row form-group">
 							<div class="col-md-12">
-								 <input type="hidden" name="movieid10" value={{ movie10.movieid   }} />
-								<input src="{{ m.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+								 <input type="hidden" name="movieid" value={{ movie10.movieid   }} />
+								<input src="{{ movie10.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
 
 
 								<div class="col-md-12">
@@ -518,12 +522,12 @@ body{
 							</form>
 					</dd>
 	<dd>
-						<form method="post" action="{% url 'showDetail11' %}">
+						<form method="post" action="{% url 'showDetail' %}">
 							{%csrf_token%}
 						<div class="row form-group">
 							<div class="col-md-12">
-								 <input type="hidden" name="movieid11" value={{ movie11.movieid   }} />
-								<input src="{{ m.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+								 <input type="hidden" name="movieid" value={{ movie11.movieid   }} />
+								<input src="{{ movie11.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
 
 
 								<div class="col-md-12">
@@ -542,12 +546,12 @@ body{
 			<li>
 				<dl class="picDl yingzhan">
 					<dd>
-						<form method="post" action="{% url 'showDetail12' %}">
+						<form method="post" action="{% url 'showDetail' %}">
 							{%csrf_token%}
 						<div class="row form-group">
 							<div class="col-md-12">
-								 <input type="hidden" name="movieid12" value={{ movie12.movieid   }} />
-								<input src="{{ m.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+								 <input type="hidden" name="movieid" value={{ movie12.movieid   }} />
+								<input src="{{ movie12.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
 
 
 								<div class="col-md-12">
@@ -562,12 +566,12 @@ body{
 							</form>
 					</dd>
 					<dd>
-						<form method="post" action="{% url 'showDetail13' %}">
+						<form method="post" action="{% url 'showDetail' %}">
 							{%csrf_token%}
 						<div class="row form-group">
 							<div class="col-md-12">
-								 <input type="hidden" name="movieid13" value={{ movie13.movieid   }} />
-								<input src="{{ m.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+								 <input type="hidden" name="movieid" value={{ movie13.movieid   }} />
+								<input src="{{ movie13.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
 
 
 								<div class="col-md-12">
@@ -582,12 +586,12 @@ body{
 							</form>
 					</dd>
 					<dd>
-						<form method="post" action="{% url 'showDetail14' %}">
+						<form method="post" action="{% url 'showDetail' %}">
 							{%csrf_token%}
 						<div class="row form-group">
 							<div class="col-md-12">
-								 <input type="hidden" name="movieid14" value={{ movie14.movieid   }} />
-								<input src="{{ m.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+								 <input type="hidden" name="movieid" value={{ movie14.movieid   }} />
+								<input src="{{ movie14.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
 
 
 								<div class="col-md-12">
@@ -606,12 +610,12 @@ body{
 			<li>
 				<dl class="picDl jingxuan">
 				<dd>
-						<form method="post" action="{% url 'showDetail15' %}">
+						<form method="post" action="{% url 'showDetail' %}">
 							{%csrf_token%}
 						<div class="row form-group">
 							<div class="col-md-12">
-								 <input type="hidden" name="movieid15" value={{ movie15.movieid   }} />
-								<input src="{{ m.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+								 <input type="hidden" name="movieid" value={{ movie15.movieid   }} />
+								<input src="{{ movie15.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
 
 
 								<div class="col-md-12">
@@ -626,12 +630,12 @@ body{
 							</form>
 					</dd>
 					<dd>
-						<form method="post" action="{% url 'showDetail16' %}">
+						<form method="post" action="{% url 'showDetail' %}">
 							{%csrf_token%}
 						<div class="row form-group">
 							<div class="col-md-12">
-								 <input type="hidden" name="movieid16" value={{ movie16.movieid   }} />
-								<input src="{{ m.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+								 <input type="hidden" name="movieid" value={{ movie16.movieid   }} />
+								<input src="{{ movie16.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
 
 
 								<div class="col-md-12">
@@ -646,12 +650,12 @@ body{
 							</form>
 					</dd>
 					<dd>
-						<form method="post" action="{% url 'showDetail17' %}">
+						<form method="post" action="{% url 'showDetail' %}">
 							{%csrf_token%}
 						<div class="row form-group">
 							<div class="col-md-12">
-								 <input type="hidden" name="movieid17" value={{ movie17.movieid   }} />
-								<input src="{{ m.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+								 <input type="hidden" name="movieid" value={{ movie17.movieid   }} />
+								<input src="{{ movie17.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
 
 
 								<div class="col-md-12">

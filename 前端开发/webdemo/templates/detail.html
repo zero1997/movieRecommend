@@ -260,6 +260,7 @@ body{
 							</div>
 
 						</div>
+		<br>
 		<div class="content">
 			<div class="row form-group">
 							<div class="col-md-12">
@@ -267,7 +268,7 @@ body{
 							</div>
 
 						</div>
-
+						<br>
 		<div class="content">
 			<div class="row form-group">
 							<div class="col-md-12">
@@ -275,6 +276,7 @@ body{
 							</div>
 
 						</div>
+						<br>
 		<div class="content">
 			<div class="row form-group">
 							<div class="col-md-12">
@@ -282,58 +284,73 @@ body{
 							</div>
 
 						</div>
+						<br>
 		<div class="content"><div class="row form-group">
 							<div class="col-md-12">
 								<font size="4">主演：</font><output type="text" name="mainActor" class="form-control"value="{{ mainActor}}">{{mainActor}}</output>
 							</div>
 
 						</div>
+						<br>
 		<div class="content"><div class="row form-group">
 							<div class="col-md-12">
 								<font size="4">电影类型：</font><output type="text" name="filmType" class="form-control"value="{{ filmType}}">{{ filmType}}</output>
 							</div>
 
 						</div>
+						<br>
 		<div class="content"><div class="row form-group">
 							<div class="col-md-12">
 								<font size="4">地区：</font><output type="text" name="area" class="form-control"value="{{area}}">{{ area}}</output>
 							</div>
 
 						</div>
+						<br>
 		<div class="content"><div class="row form-group">
 							<div class="col-md-12">
 								<font size="4">语言：</font><output type="text" name="language" class="form-control"value="{{language}}">{{language}}</output>
 							</div>
 
 						</div>
+						<br>
 		<div class="content"><div class="row form-group">
 							<div class="col-md-12">
 								<font size="4">发行时间：</font><output type="text" name="pubDate" class="form-control"value="{{ pubDate}}">{{ pubDate}}</output>
 							</div>
 
 						</div>
+						<br>
 		<div class="content"><div class="row form-group">
 							<div class="col-md-12">
 								<font size="4">时长：</font><output type="text" name="duration" class="form-control"value="{{ duration}}">{{ duration}}</output>
 							</div>
 
 						</div>
+						<br>
 		<div class="content"><div class="row form-group">
 							<div class="col-md-12">
 								<font size="4">总结：</font><output type="text" name="summary" class="form-control"value="{{ summary}}">{{ summary}}</output>
 							</div>
 
 						</div>
+						<br>
 		<div class="content"><div class="row form-group">
 							<div class="col-md-12">
-								<font size="4">评论：</font><output type="text" name="comments" class="form-control"value="{{ comments}}">{{ comments}}</output>
+								<font size="4">评论：</font>
+								<br>
+								<br>
+								{% for c in comments %}
+								<p>{{ c }}</p>
+								<br>
+								<hr>
+								<br>
+								{% endfor %}
 							</div>
 
 						</div>
-
+						<br>
 						</div>
-
-		  						 <div class="clear"> </div>
+		  		<div class="clear"> </div>
 							</div>
 							<!---start-comments-section--->
 							<div class="comment-section">
@@ -341,22 +358,18 @@ body{
 
 
 						<div class="row form-group">
+								<input type="hidden" name="movieid" value={{  movieid   }} />
 													<div class="col-md-12">
 														<a href={{ referenceUrl}} ><input class="button green" type="submit" value="喜欢" /></a>
-
-
-
 													</div>
 												</div>
-
-
 
 					<form method="post" action="{% url 'dislike' %}">
 												{%csrf_token%}
 						<div class="row form-group">
+								<input type="hidden" name="movieid" value={{  movieid   }} />
 													<div class="col-md-12">
 														<input class="button orange" type="submit" value="无感" />
-
 													</div>
 												</div>
 
@@ -364,6 +377,66 @@ body{
 
 					</div>
 			</div>
+			<dd>
+						<form method="post" action="{% url 'showDetail' %}">
+							{%csrf_token%}
+						<div class="row form-group">
+							<div class="col-md-12">
+								 <input type="hidden" name="movieid" value={{ movie0.movieid   }} />
+								<input src="{{ movie0.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+
+
+								<div class="col-md-12">
+								<output type="text" name="{{ movie0.moviename   }}" class="form-control"value="{{movie0.moviename   }}">电影名：{{movie0.moviename }}   </output>
+							</div>
+								<div class="col-md-12">
+								<output type="text" name="{{ movie0.score   }}" class="form-control"value="{{ movie0.score   }}">评分：{{ movie0.score }}   </output>
+							</div>
+
+						</div>
+							</div>
+						</form>
+					</dd>
+					<dd>
+						<form method="post" action="{% url 'showDetail' %}">
+							{%csrf_token%}
+						<div class="row form-group">
+							<div class="col-md-12">
+								 <input type="hidden" name="movieid" value={{ movie1.movieid   }} />
+								<input src="{{ movie1.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+
+
+								<div class="col-md-12">
+								<output type="text" name="{{ movie1.moviename   }}" class="form-control"value="{{movie1.moviename   }}">电影名：{{movie1.moviename }}   </output>
+							</div>
+								<div class="col-md-12">
+								<output type="text" name="{{ movie1.score   }}" class="form-control"value="{{ movie1.score   }}">评分：{{ movie1.score }}   </output>
+							</div>
+
+						</div>
+						</div>
+						</form>
+					</dd>
+					<dd>
+						<form method="post" action="{% url 'showDetail' %}">
+							{%csrf_token%}
+						<div class="row form-group">
+							<div class="col-md-12">
+								 <input type="hidden" name="movieid" value={{ movie2.movieid   }} />
+								<input src="{{ movie2.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+
+
+								<div class="col-md-12">
+								<output type="text" name="{{ movie2.moviename   }}" class="form-control"value="{{movie2.moviename   }}">电影名：{{movie2.moviename }}   </output>
+							</div>
+								<div class="col-md-12">
+								<output type="text" name="{{ movie2.score   }}" class="form-control"value="{{ movie2.score   }}">评分：{{ movie2.score }}   </output>
+							</div>
+
+						</div>
+						</div>
+							</form>
+					</dd>
 							<!---//End-comments-section--->
 						</div>
 						 </div>

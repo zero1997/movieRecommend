@@ -117,20 +117,216 @@ body{
 
 	</head>
 	<body>
-<form method="post" action="{% url 'showDetail' %}">
-							{%csrf_token%}
-						<div class="row form-group">
+<div class="top">
+                   <center>
+                    <ul>
+                    <li>电影推荐系统</li>
+
+                      </ul>
+                    </center>
+            </div>
+
+		</div>
+		</div>
+	<div class="gtco-loader"></div>
+
+	<div id="page">
+
+
+	<div class="page-inner">
+	<nav class="gtco-nav" role="navigation">
+		<div class="gtco-container">
+
+
+
+		</div>
+	</nav>
+
+<header id="gtco-header" class="gtco-cover" role="banner" style="background-image: url(/static/images/img_5.png)">		<div class="overlay"></div>
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-12 col-md-offset-0 text-left">
+					<div class="row row-mt-15em">
+						<div class="gtco-container">
+			<div class="row">
+				<div class="wrap">
+			<div class="single-page">
+				<img src="{{poster}}" width="250px" height="400px" >
+
+								<div class="row form-group">
+							<div class="row form-group">
 							<div class="col-md-12">
-								<input type="hidden"  name="movieid" value="{{ m.movieid }}" />
-								<input src="{{ m.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
-							<div class="col-md-12">
-								<output type="text" name="{{ m.moviename   }}" class="form-control"value="{{ m.moviename   }}">电影名：{{ m.moviename }}   </output>
-							</div>
-								<div class="col-md-12">
-								<output type="text" name="{{ m.score   }}" class="form-control"value="{{ m.score   }}">评分：{{ m.score }}   </output>
+								<font size="4">电影名</font><output type="text" name="movieName" class="form-control"value="{{ movieName}}">{{ movieName}}</output>
 							</div>
 
 						</div>
+		<div class="content">
+			<div class="row form-group">
+							<div class="col-md-12">
+								<font size="4">评分</font><output type="text" name="score" class="form-control"value="{{ score}}">{{ score}}</output>
+							</div>
+
+						</div>
+
+		<div class="content">
+			<div class="row form-group">
+							<div class="col-md-12">
+								<font size="4">导演</font><output type="text" name="director" class="form-control"value="{{ director}}">{{ director}}</output>
+							</div>
+
+						</div>
+		<div class="content">
+			<div class="row form-group">
+							<div class="col-md-12">
+								<font size="4">编剧</font><output type="text" name="scripwriter" class="form-control"value="{{ scripwriter}}">{{ scripwriter}}</output>
+							</div>
+
+						</div>
+		<div class="content"><div class="row form-group">
+							<div class="col-md-12">
+								<font size="4">主演</font><output type="text" name="mainActor" class="form-control"value="{{ mainActor}}">{{mainActor}}</output>
+							</div>
+
+						</div>
+		<div class="content"><div class="row form-group">
+							<div class="col-md-12">
+								<font size="4">电影类型</font><output type="text" name="filmType" class="form-control"value="{{ filmType}}">{{ filmType}}</output>
+							</div>
+
+						</div>
+		<div class="content"><div class="row form-group">
+							<div class="col-md-12">
+								<font size="4">地区</font><output type="text" name="area" class="form-control"value="{{area}}">{{ area}}</output>
+							</div>
+
+						</div>
+		<div class="content"><div class="row form-group">
+							<div class="col-md-12">
+								<font size="4">语言</font><output type="text" name="language" class="form-control"value="{{language}}">{{language}}</output>
+							</div>
+
+						</div>
+		<div class="content"><div class="row form-group">
+							<div class="col-md-12">
+								<font size="4">发行时间</font><output type="text" name="pubDate" class="form-control"value="{{ pubDate}}">{{ pubDate}}</output>
+							</div>
+
+						</div>
+		<div class="content"><div class="row form-group">
+							<div class="col-md-12">
+								<font size="4">时长</font><output type="text" name="duration" class="form-control"value="{{ duration}}">{{ duration}}</output>
+							</div>
+
+						</div>
+		<div class="content"><div class="row form-group">
+							<div class="col-md-12">
+								<font size="4">总结</font><output type="text" name="summary" class="form-control"value="{{ summary}}">{{ summary}}</output>
+							</div>
+
+						</div>
+		<div class="content"><div class="row form-group">
+							<div class="col-md-12">
+								<font size="4">评论</font><output type="text" name="comments" class="form-control"value="{{ comments}}">{{ comments}}</output>
+							</div>
+
+						</div>
+		<div class="content"><div class="row form-group">
+							<div class="col-md-12">
+								referenceUrl<output type="text" name="referenceUrl" class="form-control"value="{{ referenceUrl}}">{{ referenceUrl}}</output>
+							</div>
+
+						</div>
+						</div>
+
+		  						 <div class="clear"> </div>
+							</div>
+							<!---start-comments-section--->
+							<div class="comment-section">
+				<div class="grids_of_2">
+
+					<form method="post" action="{% url 'like' %}">
+												{%csrf_token%}
+						<div class="row form-group">
+													<div class="col-md-12">
+														<input class="button green" type="submit" value="喜欢" />
+
+
+													</div>
+												</div>
+
+					</form>
+
+					<form method="post" action="{% url 'dislike' %}">
+												{%csrf_token%}
+						<div class="row form-group">
+													<div class="col-md-12">
+														<input class="button orange" type="submit" value="无感" />
+
+													</div>
+												</div>
+
+					</form>
+
+					</div>
+			</div>
+							<!---//End-comments-section--->
+						</div>
+						 </div>
+		</div>
+		<!----start-footer--->
+
+		<!----//End-footer--->
+		<!---//End-wrap---->
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>
+			</div>
+			</div>
+			</div>
+		</div>
+
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+
+
+	</div>
+
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+
+	<!-- jQuery -->
+	<script src="/static/js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="/static/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="/static/js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="/static/js/jquery.waypoints.min.js"></script>
+	<!-- Carousel -->
+	<script src="/static/js/owl.carousel.min.js"></script>
+	<!-- countTo -->
+	<script src="/static/js/jquery.countTo.js"></script>
+	<!-- Magnific Popup -->
+	<script src="/static/js/jquery.magnific-popup.min.js"></script>
+	<script src="/static/js/magnific-popup-options.js"></script>
+	<!-- Main -->
+	<script src="/static/js/main.js"></script>
 
 	</body>
 </html>

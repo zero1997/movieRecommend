@@ -1,45 +1,183 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Home</title>
-		<link href="/static/css/style1.css" rel='stylesheet' type='text/css' />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="shortcut icon" type="/static/image/x-icon" href="/static/images/fav-icon.png" />
-		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-		</script>
-		<!----webfonts---->
-		<link href='http://fonts.useso.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
-		<!----//webfonts---->
-		<!-- Global CSS for the page and tiles -->
-  		<link rel="stylesheet" href="/static/css/main.css">
-  		<!-- //Global CSS for the page and tiles -->
-		<!---start-click-drop-down-menu----->
-		<script src="/static/js/jquery.min.js"></script>
-        <!----start-dropdown--->
-         <script type="text/javascript">
-			var $ = jQuery.noConflict();
-				$(function() {
-					$('#activator').click(function(){
-						$('#box').animate({'top':'0px'},500);
-					});
-					$('#boxclose').click(function(){
-					$('#box').animate({'top':'-700px'},500);
-					});
-				});
-				$(document).ready(function(){
-				//Hide (Collapse) the toggle containers on load
-				$(".toggle_container").hide(); 
-				//Switch the "Open" and "Close" state per click then slide up/down (depending on open/close state)
-				$(".trigger").click(function(){
-					$(this).toggleClass("active").next().slideToggle("slow");
-						return false; //Prevent the browser jump to the link anchor
-				});
-									
-			});
-		</script>
-		<link rel="stylesheet" type="text/css" href="/static/css/base.css" media="screen">
-	<link rel="stylesheet" type="text/css" href="/static/css/button.css" media="screen">
-		<style type="text/css">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="/static/css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="/static/css/icomoon.css">
+	<!-- Themify Icons-->
+	<link rel="stylesheet" href="/static/css/themify-icons.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="/static/css/bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="/static/css/magnific-popup.css">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="/static/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="/static/css/owl.theme.default.min.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/style2.css">
+	<!-- Modernizr JS -->
+	<script src="/static/js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="/static/js/respond.min.js"></script>
+	<![endif]-->
+<style type="text/css">
+.demo{width:760px; margin:20px auto 0 auto; height:70px;}
+.button {
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 16px/100% 'Microsoft yahei',Arial, Helvetica, sans-serif;
+	padding: .5em 2em .55em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	-webkit-border-radius: .5em;
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+.button:hover {
+	text-decoration: none;
+}
+.button:active {
+	position: relative;
+	top: 1px;
+}
+.bigrounded {
+	-webkit-border-radius: 2em;
+	-moz-border-radius: 2em;
+	border-radius: 2em;
+}
+.medium {
+	font-size: 12px;
+	padding: .4em 1.5em .42em;
+}
+.small {
+	font-size: 11px;
+	padding: .2em 1em .275em;
+}
+
+
+/* blue */
+.blue {
+	color: #d9eef7;
+	border: solid 1px #0076a3;
+	background: #0095cd;
+	background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+	background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee', endColorstr='#0078a5');
+}
+.blue:hover {
+	background: #007ead;
+	background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+	background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#0095cc', endColorstr='#00678e');
+}
+.blue:active {
+	color: #80bed6;
+	background: -webkit-gradient(linear, left top, left bottom, from(#0078a5), to(#00adee));
+	background: -moz-linear-gradient(top,  #0078a5,  #00adee);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#0078a5', endColorstr='#00adee');
+}
+
+/* green */
+.green {
+	color: #e8f0de;
+	border: solid 1px #538312;
+	background: #64991e;
+	background: -webkit-gradient(linear, left top, left bottom, from(#7db72f), to(#4e7d0e));
+	background: -moz-linear-gradient(top,  #7db72f,  #4e7d0e);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#7db72f', endColorstr='#4e7d0e');
+}
+.green:hover {
+	background: #538018;
+	background: -webkit-gradient(linear, left top, left bottom, from(#6b9d28), to(#436b0c));
+	background: -moz-linear-gradient(top,  #6b9d28,  #436b0c);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#6b9d28', endColorstr='#436b0c');
+}
+.green:active {
+	color: #a9c08c;
+	background: -webkit-gradient(linear, left top, left bottom, from(#4e7d0e), to(#7db72f));
+	background: -moz-linear-gradient(top,  #4e7d0e,  #7db72f);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#4e7d0e', endColorstr='#7db72f');
+}
+
+/* white */
+.white {
+	color: #606060;
+	border: solid 1px #b7b7b7;
+	background: #fff;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ededed));
+	background: -moz-linear-gradient(top,  #fff,  #ededed);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed');
+}
+.white:hover {
+	background: #ededed;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#dcdcdc));
+	background: -moz-linear-gradient(top,  #fff,  #dcdcdc);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dcdcdc');
+}
+.white:active {
+	color: #999;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#fff));
+	background: -moz-linear-gradient(top,  #ededed,  #fff);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#ffffff');
+}
+
+/* orange */
+.orange {
+	color: #fef4e9;
+	border: solid 1px #da7c0c;
+	background: #f78d1d;
+	background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
+	background: -moz-linear-gradient(top,  #faa51a,  #f47a20);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
+}
+.orange:hover {
+	background: #f47c20;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f88e11), to(#f06015));
+	background: -moz-linear-gradient(top,  #f88e11,  #f06015);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f88e11', endColorstr='#f06015');
+}
+.orange:active {
+	color: #fcd3a5;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f47a20), to(#faa51a));
+	background: -moz-linear-gradient(top,  #f47a20,  #faa51a);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f47a20', endColorstr='#faa51a');
+}
+
+</style>
+	<style type="text/css">
         .top{
     /* 设置宽度高度背景颜色 */
     height: auto; /*高度改为自动高度*/
@@ -106,13 +244,11 @@ body{
 }
 
        </style>
-        <!----//End-dropdown--->
-		<!---//End-click-drop-down-menu----->
-	</head>
-	<body>
-		<!---start-wrap---->
-			<!---start-header---->
-			<div class="top">
+</head>
+
+<body>
+<div id="page">
+<div class="top">
                    <center>
                     <ul>
                     <li>电影推荐系统</li>
@@ -122,310 +258,514 @@ body{
             </div>
 
 		</div>
-		<!---//End-header---->
-		<!---start-content---->
-		<div class="content">
-			<div class="wrap">
-			 <div id="main" role="main">
-			      <ul id="tiles">
-			        <!-- These are our grid blocks -->
-			        <li onclick="location.href='single-page.html';">
-			        	<img src="{{src}}" width="200" height="200">
-			        	<div class="post-info">
-			        		<div class="post-basic-info">
-				        		<h3><a href="#">Animation films</a></h3>
-				        		<span><a href="#"><label> </label>Movies</a></span>
-				        		<p>Lorem Ipsum is simply dummy text of the printing & typesetting industry.</p>
-			        		</div>
-			        		<div class="post-info-rate-share">
-			        			<div class="rateit">
-			        				<span> </span>
-			        			</div>
-			        			<div class="post-share">
-			        				<span> </span>
-			        			</div>
-			        			<div class="clear"> </div>
-			        		</div>
-			        	</div>
-			        </li>
-			        <li onclick="location.href='single-page.html';">
-			        	<img src="/static/images/img2.jpg" width="200" height="299">
-						<div class="post-info">
-			        		<div class="post-basic-info">
-				        		<h3><a href="#">Animation films</a></h3>
-				        		<span><a href="#"><label> </label>Movies</a></span>
-				        		<p>Lorem Ipsum is simply dummy text of the printing & typesetting industry.</p>
-			        		</div>
-			        		<div class="post-info-rate-share">
-			        			<div class="rateit">
-			        				<span> </span>
-			        			</div>
-			        			<div class="post-share">
-			        				<span> </span>
-			        			</div>
-			        			<div class="clear"> </div>
-			        		</div>
-			        	</div>
-					</li>
-			        <li onclick="location.href='single-page.html';">
-			        	<img src="/static/images/img3.jpg" width="200" height="214">
-			        	<div class="post-info">
-			        		<div class="post-basic-info">
-				        		<h3><a href="#">Animation films</a></h3>
-				        		<span><a href="#"><label> </label>Movies</a></span>
-				        		<p>Lorem Ipsum is simply dummy text of the printing & typesetting industry.</p>
-			        		</div>
-			        		<div class="post-info-rate-share">
-			        			<div class="rateit">
-			        				<span> </span>
-			        			</div>
-			        			<div class="post-share">
-			        				<span> </span>
-			        			</div>
-			        			<div class="clear"> </div>
-			        		</div>
-			        	</div>
-			        </li>
-			        <li onclick="location.href='single-page.html';">
-			        	<img src="/static/images/img4.jpg" width="200" height="333">
-			        	<div class="post-info">
-			        		<div class="post-basic-info">
-				        		<h3><a href="#">Animation films</a></h3>
-				        		<span><a href="#"><label> </label>Movies</a></span>
-				        		<p>Lorem Ipsum is simply dummy text of the printing & typesetting industry.</p>
-			        		</div>
-			        		<div class="post-info-rate-share">
-			        			<div class="rateit">
-			        				<span> </span>
-			        			</div>
-			        			<div class="post-share">
-			        				<span> </span>
-			        			</div>
-			        			<div class="clear"> </div>
-			        		</div>
-			        	</div>
-			        </li>
-			        <!----//--->
-			        <li onclick="location.href='single-page.html';">
-			        	<img src="/static/images/img4.jpg" width="200" height="333">
-			        	<div class="post-info">
-			        		<div class="post-basic-info">
-				        		<h3><a href="#">Animation films</a></h3>
-				        		<span><a href="#"><label> </label>Movies</a></span>
-				        		<p>Lorem Ipsum is simply dummy text of the printing & typesetting industry.</p>
-			        		</div>
-			        		<div class="post-info-rate-share">
-			        			<div class="rateit">
-			        				<span> </span>
-			        			</div>
-			        			<div class="post-share">
-			        				<span> </span>
-			        			</div>
-			        			<div class="clear"> </div>
-			        		</div>
-			        	</div>
-			        </li>
-			        <li onclick="location.href='single-page.html';">
-			        	<img src="/static/images/img3.jpg" width="200" height="214">
-			        	<div class="post-info">
-			        		<div class="post-basic-info">
-				        		<h3><a href="#">Animation films</a></h3>
-				        		<span><a href="#"><label> </label>Movies</a></span>
-				        		<p>Lorem Ipsum is simply dummy text of the printing & typesetting industry.</p>
-			        		</div>
-			        		<div class="post-info-rate-share">
-			        			<div class="rateit">
-			        				<span> </span>
-			        			</div>
-			        			<div class="post-share">
-			        				<span> </span>
-			        			</div>
-			        			<div class="clear"> </div>
-			        		</div>
-			        	</div>
-			        </li>
-			        <li onclick="location.href='single-page.html';">
-			        	<img src="/static/images/img2.jpg" width="200" height="299">
-						<div class="post-info">
-			        		<div class="post-basic-info">
-				        		<h3><a href="#">Animation films</a></h3>
-				        		<span><a href="#"><label> </label>Movies</a></span>
-				        		<p>Lorem Ipsum is simply dummy text of the printing & typesetting industry.</p>
-			        		</div>
-			        		<div class="post-info-rate-share">
-			        			<div class="rateit">
-			        				<span> </span>
-			        			</div>
-			        			<div class="post-share">
-			        				<span> </span>
-			        			</div>
-			        			<div class="clear"> </div>
-			        		</div>
-			        	</div>
-					</li>
-					  <li onclick="location.href='single-page.html';">
-			        	<img src="/static/images/img1.jpg" width="200" height="200">
-			        	<div class="post-info">
-			        		<div class="post-basic-info">
-				        		<h3><a href="#">Animation films</a></h3>
-				        		<span><a href="#"><label> </label>Movies</a></span>
-				        		<p>Lorem Ipsum is simply dummy text of the printing & typesetting industry.</p>
-			        		</div>
-			        		<div class="post-info-rate-share">
-			        			<div class="rateit">
-			        				<span> </span>
-			        			</div>
-			        			<div class="post-share">
-			        				<span> </span>
-			        			</div>
-			        			<div class="clear"> </div>
-			        		</div>
-			        	</div>
-			        </li>
-			        <!----//--->
-			         <li onclick="location.href='single-page.html';">
-			        	<img src="/static/images/img1.jpg" width="200" height="200">
-			        	<div class="post-info">
-			        		<div class="post-basic-info">
-				        		<h3><a href="#">Animation films</a></h3>
-				        		<span><a href="#"><label> </label>Movies</a></span>
-				        		<p>Lorem Ipsum is simply dummy text of the printing & typesetting industry.</p>
-			        		</div>
-			        		<div class="post-info-rate-share">
-			        			<div class="rateit">
-			        				<span> </span>
-			        			</div>
-			        			<div class="post-share">
-			        				<span> </span>
-			        			</div>
-			        			<div class="clear"> </div>
-			        		</div>
-			        	</div>
-			        </li>
-			        <li onclick="location.href='single-page.html';">
-			        	<img src="/static/images/img2.jpg" width="200" height="299">
-						<div class="post-info">
-			        		<div class="post-basic-info">
-				        		<h3><a href="#">Animation films</a></h3>
-				        		<span><a href="#"><label> </label>Movies</a></span>
-				        		<p>Lorem Ipsum is simply dummy text of the printing & typesetting industry.</p>
-			        		</div>
-			        		<div class="post-info-rate-share">
-			        			<div class="rateit">
-			        				<span> </span>
-			        			</div>
-			        			<div class="post-share">
-			        				<span> </span>
-			        			</div>
-			        			<div class="clear"> </div>
-			        		</div>
-			        	</div>
-					</li>
-			        <li onclick="location.href='single-page.html';">
-			        	<img src="/static/images/img3.jpg" width="200" height="214">
-			        	<div class="post-info">
-			        		<div class="post-basic-info">
-				        		<h3><a href="#">Animation films</a></h3>
-				        		<span><a href="#"><label> </label>Movies</a></span>
-				        		<p>Lorem Ipsum is simply dummy text of the printing & typesetting industry.</p>
-			        		</div>
-			        		<div class="post-info-rate-share">
-			        			<div class="rateit">
-			        				<span> </span>
-			        			</div>
-			        			<div class="post-share">
-			        				<span> </span>
-			        			</div>
-			        			<div class="clear"> </div>
-			        		</div>
-			        	</div>
-			        </li>
-			        <li onclick="location.href='single-page.html';">
-			        	<img src="/static/images/img4.jpg" width="200" height="333">
-			        	<div class="post-info">
-			        		<div class="post-basic-info">
-				        		<h3><a href="#">Animation films</a></h3>
-				        		<span><a href="#"><label> </label>Movies</a></span>
-				        		<p>Lorem Ipsum is simply dummy text of the printing & typesetting industry.</p>
-			        		</div>
-			        		<div class="post-info-rate-share">
-			        			<div class="rateit">
-			        				<span> </span>
-			        			</div>
-			        			<div class="post-share">
-			        				<span> </span>
-			        			</div>
-			        			<div class="clear"> </div>
-			        		</div>
-			        	</div>
-			        </li>
-			        <!-- End of grid blocks -->
-			      </ul>
-			    </div>
+
+	<div class="page-inner">
+	<nav class="gtco-nav" role="navigation">
+
+	</nav>
+	<header id="gtco-header" class="gtco-cover" role="banner" style="background-image: url(/static/images/img_4.jpg)">
+<link type="text/css" rel="stylesheet" media="screen" href="/static/css/style2.css" />
+<div class="layout style0 yxl">
+	<div class="hd">
+		<h2><font size="5" color="black">猜你喜欢</font></h2>
+		<strong class="border"></strong>
+        <form method="post" action="{% url 'rOrL' %}">
+		{%csrf_token%}
+			<div class="row form-group">
+				<div class="col-md-12">
+                    <input class="button white" type="submit" value="去登陆" />
+				</div>
 			</div>
-		</div>
-		<!---//End-content---->
-		<!----wookmark-scripts---->
-		  <script src="/static/js/jquery.imagesloaded.js"></script>
-		  <script src="/static/js/jquery.wookmark.js"></script>
-		  <script type="text/javascript">
-		    (function ($){
-		      var $tiles = $('#tiles'),
-		          $handler = $('li', $tiles),
-		          $main = $('#main'),
-		          $window = $(window),
-		          $document = $(document),
-		          options = {
-		            autoResize: true, // This will auto-update the layout when the browser window is resized.
-		            container: $main, // Optional, used for some extra CSS styling
-		            offset: 20, // Optional, the distance between grid items
-		            itemWidth:280 // Optional, the width of a grid item
-		          };
-		      /**
-		       * Reinitializes the wookmark handler after all images have loaded
-		       */
-		      function applyLayout() {
-		        $tiles.imagesLoaded(function() {
-		          // Destroy the old handler
-		          if ($handler.wookmarkInstance) {
-		            $handler.wookmarkInstance.clear();
-		          }
+		</form>
 
-		          // Create a new layout handler.
-		          $handler = $('li', $tiles);
-		          $handler.wookmark(options);
-		        });
-		      }
-		      /**
-		       * When scrolled all the way to the bottom, add more tiles
-		       */
-		      function onScroll() {
-		        // Check if we're within 100 pixels of the bottom edge of the broser window.
-		        var winHeight = window.innerHeight ? window.innerHeight : $window.height(), // iphone fix
-		            closeToBottom = ($window.scrollTop() + winHeight > $document.height() - 100);
+		<div><a href="javascript:;" class="changeBnt" id="xxlChg"><i></i>下一页</a></div>
+	</div>
+	
+	<div class="hd">
+		<div class="col-md-12" > <a href="javascript:window.location.reload();" class="changeBnt" id="xxlChg2"><i></i>换一批</a></div>
+	</div>
+		<div class="bd">
+		<ul class="picLB" id="picLBxxl">
+			<li>
+				<dl class="picDl huozhe">
 
-		        if (closeToBottom) {
-		          // Get the first then items from the grid, clone them, and add them to the bottom of the grid
-		          var $items = $('li', $tiles),
-		              $firstTen = $items.slice(0, 10);
-		          $tiles.append($firstTen.clone());
+					<dd>
+						<form method="post" action="{% url 'showDetail' %}">
+							{%csrf_token%}
+						<div class="row form-group">
+							<div class="col-md-12">
+								 <input type="hidden" name="movieid" value={{ movie0.movieid   }} />
+								<input src="{{ movie0.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
 
-		          applyLayout();
-		        }
-		      };
 
-		      // Call the layout function for the first time
-		      applyLayout();
+								<div class="col-md-12">
+								<output type="text" name="{{ movie0.moviename   }}" class="form-control"value="{{movie0.moviename   }}">电影名：{{movie0.moviename }}   </output>
+							</div>
+								<div class="col-md-12">
+								<output type="text" name="{{ movie0.score   }}" class="form-control"value="{{ movie0.score   }}">评分：{{ movie0.score }}   </output>
+							</div>
 
-		      // Capture scroll event.
-		      $window.bind('scroll.wookmark', onScroll);
-		    })(jQuery);
-		  </script>
-		<!----//wookmark-scripts---->
-		<!----start-footer--->
-		
-		<!----//End-footer--->
-		<!---//End-wrap---->
-	</body>
+						</div>
+							</div>
+						</form>
+					</dd>
+					<dd>
+						<form method="post" action="{% url 'showDetail' %}">
+							{%csrf_token%}
+						<div class="row form-group">
+							<div class="col-md-12">
+								 <input type="hidden" name="movieid" value={{ movie1.movieid   }} />
+								<input src="{{ movie1.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+
+
+								<div class="col-md-12">
+								<output type="text" name="{{ movie1.moviename   }}" class="form-control"value="{{movie1.moviename   }}">电影名：{{movie1.moviename }}   </output>
+							</div>
+								<div class="col-md-12">
+								<output type="text" name="{{ movie1.score   }}" class="form-control"value="{{ movie1.score   }}">评分：{{ movie1.score }}   </output>
+							</div>
+
+						</div>
+						</div>
+						</form>
+					</dd>
+					<dd>
+						<form method="post" action="{% url 'showDetail' %}">
+							{%csrf_token%}
+						<div class="row form-group">
+							<div class="col-md-12">
+								 <input type="hidden" name="movieid" value={{ movie2.movieid   }} />
+								<input src="{{ movie2.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+
+
+								<div class="col-md-12">
+								<output type="text" name="{{ movie2.moviename   }}" class="form-control"value="{{movie2.moviename   }}">电影名：{{movie2.moviename }}   </output>
+							</div>
+								<div class="col-md-12">
+								<output type="text" name="{{ movie2.score   }}" class="form-control"value="{{ movie2.score   }}">评分：{{ movie2.score }}   </output>
+							</div>
+
+						</div>
+						</div>
+							</form>
+					</dd>
+				</dl>
+			</li>
+			<li>
+				<dl class="picDl jilu">
+					<dd>
+						<form method="post" action="{% url 'showDetail' %}">
+							{%csrf_token%}
+						<div class="row form-group">
+							<div class="col-md-12">
+								 <input type="hidden" name="movieid" value={{ movie3.movieid   }} />
+								<input src="{{ movie3.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+
+
+								<div class="col-md-12">
+								<output type="text" name="{{ movie3.moviename   }}" class="form-control"value="{{movie3.moviename   }}">电影名：{{movie3.moviename }}   </output>
+							</div>
+								<div class="col-md-12">
+								<output type="text" name="{{ movie3.score   }}" class="form-control"value="{{ movie3.score   }}">评分：{{ movie3.score }}   </output>
+							</div>
+
+						</div>
+							</div>
+							</form>
+					</dd>
+					<dd>
+						<form method="post" action="{% url 'showDetail' %}">
+							{%csrf_token%}
+						<div class="row form-group">
+							<div class="col-md-12">
+								 <input type="hidden" name="movieid" value={{ movie4.movieid   }} />
+								<input src="{{ movie4.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+
+
+								<div class="col-md-12">
+								<output type="text" name="{{ movie4.moviename   }}" class="form-control"value="{{movie4.moviename   }}">电影名：{{movie4.moviename }}   </output>
+							</div>
+								<div class="col-md-12">
+								<output type="text" name="{{ movie4.score   }}" class="form-control"value="{{ movie4.score   }}">评分：{{ movie4.score }}   </output>
+							</div>
+
+						</div>
+							</div>
+							</form>
+					</dd>
+					<dd>
+						<form method="post" action="{% url 'showDetail' %}">
+							{%csrf_token%}
+						<div class="row form-group">
+							<div class="col-md-12">
+								 <input type="hidden" name="movieid" value={{ movie5.movieid   }} />
+								<input src="{{ movie5.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+
+
+								<div class="col-md-12">
+								<output type="text" name="{{ movie5.moviename   }}" class="form-control"value="{{movie5.moviename   }}">电影名：{{movie5.moviename }}   </output>
+							</div>
+								<div class="col-md-12">
+								<output type="text" name="{{ movie5.score   }}" class="form-control"value="{{ movie5.score   }}">评分：{{ movie5.score }}   </output>
+							</div>
+
+						</div>
+							</div>
+							</form>
+					</dd>
+				</dl>
+			</li>
+			<li>
+				<dl class="picDl tuhua">
+					<dd>
+						<form method="post" action="{% url 'showDetail' %}">
+							{%csrf_token%}
+						<div class="row form-group">
+							<div class="col-md-12">
+								 <input type="hidden" name="movieid" value={{ movie6.movieid   }} />
+								<input src="{{ movie6.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+
+
+								<div class="col-md-12">
+								<output type="text" name="{{ movie6.moviename   }}" class="form-control"value="{{movie6.moviename   }}">电影名：{{movie6.moviename }}   </output>
+							</div>
+								<div class="col-md-12">
+								<output type="text" name="{{ movie6.score   }}" class="form-control"value="{{ movie6.score   }}">评分：{{ movie6.score }}   </output>
+							</div>
+
+						</div>
+							</div>
+							</form>
+					</dd>
+					<dd>
+						<form method="post" action="{% url 'showDetail' %}">
+							{%csrf_token%}
+						<div class="row form-group">
+							<div class="col-md-12">
+								 <input type="hidden" name="movieid" value={{ movie7.movieid   }} />
+								<input src="{{ movie7.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+
+
+								<div class="col-md-12">
+								<output type="text" name="{{ movie7.moviename   }}" class="form-control"value="{{movie7.moviename   }}">电影名：{{movie7.moviename }}   </output>
+							</div>
+								<div class="col-md-12">
+								<output type="text" name="{{ movie7.score   }}" class="form-control"value="{{ movie7.score   }}">评分：{{ movie7.score }}   </output>
+							</div>
+
+						</div>
+							</div>
+							</form>
+					</dd>
+					<dd>
+						<form method="post" action="{% url 'showDetail' %}">
+							{%csrf_token%}
+						<div class="row form-group">
+							<div class="col-md-12">
+								 <input type="hidden" name="movieid" value={{ movie8.movieid   }} />
+								<input src="{{ movie8.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+
+
+								<div class="col-md-12">
+								<output type="text" name="{{ movie8.moviename   }}" class="form-control"value="{{movie8.moviename   }}">电影名：{{movie8.moviename }}   </output>
+							</div>
+								<div class="col-md-12">
+								<output type="text" name="{{ movie8.score   }}" class="form-control"value="{{ movie8.score   }}">评分：{{ movie8.score }}   </output>
+							</div>
+
+						</div>
+							</div>
+							</form>
+					</dd>
+				</dl>
+			</li>
+			<li>
+				<dl class="picDl today">
+					<dd>
+						<form method="post" action="{% url 'showDetail' %}">
+							{%csrf_token%}
+						<div class="row form-group">
+							<div class="col-md-12">
+								 <input type="hidden" name="movieid" value={{ movie9.movieid   }} />
+								<input src="{{ movie9.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+
+
+								<div class="col-md-12">
+								<output type="text" name="{{ movie9.moviename   }}" class="form-control"value="{{movie9.moviename   }}">电影名：{{movie9.moviename }}   </output>
+								</div>
+								<div class="col-md-12">
+								<output type="text" name="{{ movie9.score   }}" class="form-control"value="{{ movie9.score   }}">评分：{{ movie9.score }}   </output></div>
+
+								</div>
+							</div>
+						</form>
+
+					</dd>
+					<dd>
+						<form method="post" action="{% url 'showDetail' %}">
+							{%csrf_token%}
+						<div class="row form-group">
+							<div class="col-md-12">
+								 <input type="hidden" name="movieid" value={{ movie10.movieid   }} />
+								<input src="{{ movie10.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+
+
+								<div class="col-md-12">
+								<output type="text" name="{{ movie10.moviename   }}" class="form-control"value="{{movie10.moviename   }}">电影名：{{movie10.moviename }}   </output>
+							</div>
+								<div class="col-md-12">
+								<output type="text" name="{{ movie10.score   }}" class="form-control"value="{{ movie10.score   }}">评分：{{ movie10.score }}   </output>
+							</div>
+
+						</div>
+							</div>
+							</form>
+					</dd>
+	<dd>
+						<form method="post" action="{% url 'showDetail' %}">
+							{%csrf_token%}
+						<div class="row form-group">
+							<div class="col-md-12">
+								 <input type="hidden" name="movieid" value={{ movie11.movieid   }} />
+								<input src="{{ movie11.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+
+
+								<div class="col-md-12">
+								<output type="text" name="{{ movie11.moviename   }}" class="form-control"value="{{movie11.moviename   }}">电影名：{{movie11.moviename }}   </output>
+							</div>
+								<div class="col-md-12">
+								<output type="text" name="{{ movie11.score   }}" class="form-control"value="{{ movie11.score   }}">评分：{{ movie11.score }}   </output>
+							</div>
+
+						</div>
+							</div>
+							</form>
+					</dd>
+				</dl>
+			</li>
+			<li>
+				<dl class="picDl yingzhan">
+					<dd>
+						<form method="post" action="{% url 'showDetail' %}">
+							{%csrf_token%}
+						<div class="row form-group">
+							<div class="col-md-12">
+								 <input type="hidden" name="movieid" value={{ movie12.movieid   }} />
+								<input src="{{ movie12.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+
+
+								<div class="col-md-12">
+								<output type="text" name="{{ movie12.moviename   }}" class="form-control"value="{{movie12.moviename   }}">电影名：{{movie12.moviename }}   </output>
+							</div>
+								<div class="col-md-12">
+								<output type="text" name="{{ movie12.score   }}" class="form-control"value="{{ movie12.score   }}">评分：{{ movie12.score }}   </output>
+							</div>
+
+						</div>
+							</div>
+							</form>
+					</dd>
+					<dd>
+						<form method="post" action="{% url 'showDetail' %}">
+							{%csrf_token%}
+						<div class="row form-group">
+							<div class="col-md-12">
+								 <input type="hidden" name="movieid" value={{ movie13.movieid   }} />
+								<input src="{{ movie13.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+
+
+								<div class="col-md-12">
+								<output type="text" name="{{ movie13.moviename   }}" class="form-control"value="{{movie13.moviename   }}">电影名：{{movie13.moviename }}   </output>
+							</div>
+								<div class="col-md-12">
+								<output type="text" name="{{ movie13.score   }}" class="form-control"value="{{ movie13.score   }}">评分：{{ movie13.score }}   </output>
+							</div>
+
+						</div>
+							</div>
+							</form>
+					</dd>
+					<dd>
+						<form method="post" action="{% url 'showDetail' %}">
+							{%csrf_token%}
+						<div class="row form-group">
+							<div class="col-md-12">
+								 <input type="hidden" name="movieid" value={{ movie14.movieid   }} />
+								<input src="{{ movie14.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+
+
+								<div class="col-md-12">
+								<output type="text" name="{{ movie14.moviename   }}" class="form-control"value="{{movie14.moviename   }}">电影名：{{movie14.moviename }}   </output>
+							</div>
+								<div class="col-md-12">
+								<output type="text" name="{{ movie14.score   }}" class="form-control"value="{{ movie14.score   }}">评分：{{ movie14.score }}   </output>
+							</div>
+
+						</div>
+							</div>
+							</form>
+					</dd>
+				</dl>
+			</li>
+			<li>
+				<dl class="picDl jingxuan">
+				<dd>
+						<form method="post" action="{% url 'showDetail' %}">
+							{%csrf_token%}
+						<div class="row form-group">
+							<div class="col-md-12">
+								 <input type="hidden" name="movieid" value={{ movie15.movieid   }} />
+								<input src="{{ movie15.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+
+
+								<div class="col-md-12">
+								<output type="text" name="{{ movie15.moviename   }}" class="form-control"value="{{movie15.moviename   }}">电影名：{{movie15.moviename }}   </output>
+							</div>
+								<div class="col-md-12">
+								<output type="text" name="{{ movie15.score   }}" class="form-control"value="{{ movie15.score   }}">评分：{{ movie15.score }}   </output>
+							</div>
+
+						</div>
+							</div>
+							</form>
+					</dd>
+					<dd>
+						<form method="post" action="{% url 'showDetail' %}">
+							{%csrf_token%}
+						<div class="row form-group">
+							<div class="col-md-12">
+								 <input type="hidden" name="movieid" value={{ movie16.movieid   }} />
+								<input src="{{ movie16.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+
+
+								<div class="col-md-12">
+								<output type="text" name="{{ movie16.moviename   }}" class="form-control"value="{{movie16.moviename   }}">电影名：{{movie16.moviename }}   </output>
+							</div>
+								<div class="col-md-12">
+								<output type="text" name="{{ movie16.score   }}" class="form-control"value="{{ movie16.score   }}">评分：{{ movie16.score }}   </output>
+							</div>
+
+						</div>
+							</div>
+							</form>
+					</dd>
+					<dd>
+						<form method="post" action="{% url 'showDetail' %}">
+							{%csrf_token%}
+						<div class="row form-group">
+							<div class="col-md-12">
+								 <input type="hidden" name="movieid" value={{ movie17.movieid   }} />
+								<input src="{{ movie17.poster}}"  type="image" width="340px" height="180px" class="btn btn-primary" >
+
+
+								<div class="col-md-12">
+								<output type="text" name="{{ movie17.moviename   }}" class="form-control"value="{{movie17.moviename   }}">电影名：{{movie17.moviename }}   </output>
+							</div>
+								<div class="col-md-12">
+								<output type="text" name="{{ movie17.score   }}" class="form-control"value="{{ movie17.score   }}">评分：{{ movie17.score }}   </output>
+							</div>
+
+						</div>
+							</div>
+							</form>
+					</dd>
+				</dl>
+			</li>
+		</ul>
+	</div>
+</div>
+</header>
+
+
+<script type="text/javascript" src="/static/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.easing.min.js"></script>
+<script type="text/javascript">
+var getyxl = jQuery('#picLBxxl li').eq(0).width();
+	(function($){
+	    var arartta= window['arartta'] = function(o){
+        return new das(o);
+    }
+    das = function(o){
+        this.obj = $('#'+o.obj);
+        this.bnt = $('#'+o.bnt);
+        this.showLi = this.obj.find('li');
+        this.current = 0;
+        this.myTimersc = '';
+        this.init()
+    }
+    das.prototype = {
+        chgPic:function(n){
+            var _this = this;
+            for (var i = 0,l= _this.showLi.length; i < l; i++) {
+                _this.showLi.eq(i).find(".pic").find('img').eq(n).attr('src',_this.showLi.eq(i).find(".pic").find('img').eq(n).attr('nsrc'));
+
+                $('#picLBxxl dl:not(:animated)').animate({left: -(n * getyxl) + "px"}, {easing:"easeInOutExpo"}, 1500, function(){});
+            }
+        },
+        rotate:function(){
+            var _this = this;
+            clearInterval(_this.myTimersc);
+            _this.bnt.children().css({
+                    '-webkit-transform':'rotate(0deg)',
+                    '-moz-transform':'rotate(0deg)'
+            });
+            var tt = 0;
+            var getBnts = _this.bnt.children();
+            _this.myTimersc = setInterval(function(){
+                tt += 10;
+                if (tt >= 180) {
+                    clearInterval(_this.myTimersc);
+                }
+                rotateElement(getBnts,tt);
+            },25)
+        },
+        init:function(){
+            var _this = this;
+            this.bnt.bind("click",function(){
+                _this.current++;
+                if (_this.current > 2) {
+                    _this.current = 0 ;
+                }
+                _this.chgPic(_this.current);
+                _this.rotate();
+
+            })
+            this.bnt.mouseenter(function () {
+                _this.rotate();
+            });
+
+        }
+    }
+})(jQuery)
+
+arartta({
+    bnt:'xxlChg',
+    obj:'picLBxxl'
+});
+
+function rotateElement(element,angle){
+    var rotate = 'rotate('+angle+'deg)';
+    if(element.css('MozTransform')!=undefined)
+        element.css('MozTransform',rotate);
+    else if(element.css('WebkitTransform')!=undefined)
+        element.css('WebkitTransform',rotate);
+}
+</script>
+
+<!--鼠标悬停二维码代码-->
+<script type="text/javascript">
+var istrueCsr = false;
+$("#picLBxxl .ftBox .name").hover(function(){
+if (!istrueCsr) {
+    $(this).siblings(".qr").fadeIn("slow");
+    istrueCsr = true;
+}
+}, function(){
+    $(this).siblings(".qr").fadeOut("slow");
+    setTimeout(function(){istrueCsr = false},1000)
+});
+</script>
+
+
+</body>
 </html>
-
