@@ -535,6 +535,7 @@ hbase-daemon.sh start thrift #用来支持python访问hbase
 ```
 
 
+
 ```
 node0
 
