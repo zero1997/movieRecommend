@@ -497,10 +497,10 @@ bak:v0 /bin/bash
 node1
 
 以root用户
-RUN wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm && \
-    rpm -ivh mysql-community-release-el7-5.noarch.rpm && \
-    yum -y update && \
-    yum install -y mysql-server
+wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm && \
+rpm -ivh mysql-community-release-el7-5.noarch.rpm && \
+yum -y update && \
+yum install -y mysql-server
 
 MySQL正确的启动方式：
 以hadoop用户
